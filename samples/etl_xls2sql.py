@@ -6,7 +6,7 @@ def record_exist(prj_id: str, sp_descript: str):
 #    print(prj_id,sp_descript)
     qryRecordExist = f"""SELECT [id]
     FROM [p_wazi].[dbo].[jira_iris_sprint_planning]
-    WHERE [projectid] = {prj_id} AND [description] = {sp_descript} """
+    WHERE [projectid] = {prj_id} AND [description] = '{sp_descript}' """
 #    print(qryRecordExist)
     cursor = conexao.cursor()	
     cursor.execute(qryRecordExist)
@@ -44,7 +44,7 @@ table_name = 'jira_iris_sprint_planning'
 #engine = create_engine(f'{db_type}://{user}:{password}@{host}:{port}/{database}')
 
 # Caminho para o arquivo Excel
-file_path = 'C:/dev/FastHTMLcurso/SprintSchedules.xlsx'
+file_path = './data/sprint_schedules.xlsx'
 # Lê o arquivo Excel
 df = pd.read_excel(file_path)
 # ou Se o seu arquivo Excel contém várias planilhas e você deseja ler uma específica, você pode usar o parâmetro sheet_name
@@ -87,27 +87,27 @@ for index, row in df.iterrows():
                     [scope_approval_date],[refinement_date],[sprint_start_date],
                     [sprint_end_date],[sprint_review_date],[week_day],[business_days],
                     [holidays_days],[projectid]) 
-                    VALUES ({row['tDescript']},{row['dPre_sprint_backlog_date']},{row['dScope_start_date']},{row['dScope_approval_date']},
-                    {row['dRefinement_date']},{row['dSprint_start_date']},{row['dSprint_end_date']},{row['dSprint_review_date']},
-                    {row['tWeek_day']},{row['iBusiness_days']},{row['iHolidays_days']},{row['iProjectid']})"""
+                    VALUES ('{row['tDescript']}','{row['dPre_sprint_backlog_date']}','{row['dScope_start_date']}','{row['dScope_approval_date']}',
+                    '{row['dRefinement_date']}','{row['dSprint_start_date']}','{row['dSprint_end_date']}','{row['dSprint_review_date']}',
+                    '{row['tWeek_day']}',{row['iBusiness_days']},{row['iHolidays_days']},{row['iProjectid']})"""
         #print(data2insert)
-        #cursor_add = conexao.cursor()
-        #cursor_add.execute(data2insert)
-        #cursor_add.commit()
-        #cursor_add.close()
-        #print("Importação concluída com sucesso!")
+        cursor_add = conexao.cursor()
+        cursor_add.execute(data2insert)
+        cursor_add.commit()
+        cursor_add.close()
+        print("Importação concluída com sucesso!")
     else:
         # Comando SQL para atualizar o campo
         sql_update = f"""
                 UPDATE {table_name}
-                SET [pre_sprint_backlog_date] = {row['dPre_sprint_backlog_date']},
-                    [scope_start_date] = {row['dScope_start_date']},
-                    [scope_approval_date] = {row['dScope_approval_date']},
-                    [refinement_date] = {row['dRefinement_date']},
-                    [sprint_start_date] = {row['dSprint_start_date']},
-                    [sprint_end_date] = {row['dSprint_end_date']},
-                    [sprint_review_date] = {row['dSprint_review_date']},
-                    [week_day] = {row['tWeek_day']},
+                SET [pre_sprint_backlog_date] = '{row['dPre_sprint_backlog_date']}',
+                    [scope_start_date] = '{row['dScope_start_date']}',
+                    [scope_approval_date] = '{row['dScope_approval_date']}',
+                    [refinement_date] = '{row['dRefinement_date']}',
+                    [sprint_start_date] = '{row['dSprint_start_date']}',
+                    [sprint_end_date] = '{row['dSprint_end_date']}',
+                    [sprint_review_date] = '{row['dSprint_review_date']}',
+                    [week_day] = '{row['tWeek_day']}',
                     [business_days] = {row['iBusiness_days']},
                     [holidays_days] = {row['iHolidays_days']}
                 WHERE ID = {recordFound}
