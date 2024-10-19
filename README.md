@@ -4,3 +4,5 @@ Modelos de Soluções e Tecnologias na prática de cursos e bibliotecas usando P
 # Bibliotecas Utilizadas
 sqlodbc para realização da conexão com banco de dados SLQ Server
 streamlit para elaboração de graficos dinamicos e visualização de dashboard
+pandas para manipulação de dados
+
