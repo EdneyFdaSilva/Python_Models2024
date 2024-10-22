@@ -1,5 +1,5 @@
 from fasthtml.common import fast_app, serve, Titled, RedirectResponse
-from componente import gerar_titulo, gerar_formulario, gerar_lista_tarefas
+from samples.componente import gerar_titulo, gerar_formulario, gerar_lista_tarefas
 
 app, routes = fast_app()
 
