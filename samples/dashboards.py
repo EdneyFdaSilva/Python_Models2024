@@ -10,7 +10,7 @@ st.set_page_config(layout="wide")
 #Desempenho das forma de pagamento…
 #Como estão as avaliações das filiais?
 
-df = pd.read_csv("supermarket_sales.csv", sep=";", decimal=",")
+df = pd.read_csv("./data/supermarket_sales.csv", sep=";", decimal=",")
 df["Date"] = pd.to_datetime(df["Date"])
 df=df.sort_values("Date")
 
