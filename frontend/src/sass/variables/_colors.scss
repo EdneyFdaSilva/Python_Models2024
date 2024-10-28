@@ -1,0 +1,103 @@
+// Color system
+@import '~bootstrap/scss/functions';
+
+$white: #ffffff !default;
+$gray-100: #f9f9f9 !default;
+$gray-200: #eeeeee !default;
+$gray-300: #dddddd !default;
+$gray-400: #cccccc !default;
+$gray-500: #999999 !default;
+$gray-600: #555555 !default;
+$gray-700: #2e2e2e !default;
+$gray-800: #242424 !default;
+$gray-900: #1f1f1f !default;
+$dove-gray: #6c6c6c !default;
+$black: #000 !default;
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    '100': $gray-100,
+    '200': $gray-200,
+    '300': $gray-300,
+    '400': $gray-400,
+    '500': $gray-500,
+    '600': $gray-600,
+    '700': $gray-700,
+    '800': $gray-800,
+    '900': $gray-900,
+    'dove-gray': $dove-gray
+  ),
+  $grays
+);
+
+$blue: #0096b6 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #67b610 !default;
+$teal: #20c997 !default;
+$cyan: rgba(0, 112, 160, 0.5) !default;
+$cerulean: #00b1e3 !default;
+$mine-shaft: #282828 !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    'blue': $blue,
+    'indigo': $indigo,
+    'purple': $purple,
+    'pink': $pink,
+    'red': $red,
+    'orange': $orange,
+    'yellow': $yellow,
+    'green': $green,
+    'teal': $teal,
+    'cyan': $cyan,
+    'white': $white,
+    'gray': $gray-600,
+    'gray-dark': $gray-700,
+    'cerulean': $cerulean,
+    'mine-shaft': $mine-shaft
+  ),
+  $colors
+);
+
+$primary: $blue !default;
+$secondary: $green !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-700 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark
+  ),
+  $theme-colors
+);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $gray-700 !default;
+$yiq-text-light: $white !default;

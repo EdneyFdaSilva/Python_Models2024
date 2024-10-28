@@ -1,0 +1,25 @@
+@import 'variables/colors'
+
+@mixin circle($width: 1rem, $height: 1rem)
+  display: inline-block
+  border-radius: 50%
+  border: 1px solid $black
+  height: $height
+  width: $width
+
+.circle
+  &-green
+    @include circle()
+    background-color: $success
+
+  &-red
+    @include circle()
+    background-color: $danger
+
+  &-yellow
+    @include circle()
+    background-color: $warning
+
+  &-gray
+    @include circle()
+    background-color: $dark

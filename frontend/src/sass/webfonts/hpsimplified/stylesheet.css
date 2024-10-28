@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'HPSimplified';
+  src: url('HPSimplified-Regular.eot');
+  src: url('HPSimplified-Regular.eot?#iefix') format('embedded-opentype'),
+    url('HPSimplified-Regular.woff2') format('woff2'),
+    url('HPSimplified-Regular.woff') format('woff'),
+    url('HPSimplified-Regular.svg#HPSimplified-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'HPSimplified';
+  src: url('HPSimplified-Light.eot');
+  src: url('HPSimplified-Light.eot?#iefix') format('embedded-opentype'),
+    url('HPSimplified-Light.woff2') format('woff2'),
+    url('HPSimplified-Light.woff') format('woff'),
+    url('HPSimplified-Light.svg#HPSimplified-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}

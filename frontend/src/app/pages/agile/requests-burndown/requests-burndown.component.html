@@ -1,0 +1,27 @@
+<div class="container-fluid p-3" style="overflow-y: hidden !important;">
+  <div class="row mt-1 p-3">
+    <h2 class="text-dark">IRIS Agile Burndown</h2>
+  </div>
+
+  <app-agile-filters
+    (filterChange)="onFilterChange($event)"
+  ></app-agile-filters>
+
+  <div class="container-execution-charts-align">
+    <div class="d-flex justify-content-between">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <app-requests-burndown-chart
+          [updateEvent]="updateChart"
+        ></app-requests-burndown-chart>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+      <app-requests-burndown-table
+        [updateEvent]="updateChart"
+      ></app-requests-burndown-table>
+    </div>
+  </div>
+</div>

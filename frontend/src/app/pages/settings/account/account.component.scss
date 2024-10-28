@@ -1,0 +1,30 @@
+.bg-dark-custom {
+  background-color: #1f1f1f;
+}
+
+input {
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+#profileImage {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: black;
+  color: black;
+}

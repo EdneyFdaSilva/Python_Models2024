@@ -1,0 +1,565 @@
+2023-11-24T17:18:21.2196589-04:00  [FTL] Application startup exception (6c57a5ba)
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotEmpty(String value, String parameterName)
+   at Microsoft.EntityFrameworkCore.SqlServerDbContextOptionsExtensions.UseSqlServer(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 sqlServerOptionsAction)
+   at Exceler8_API.Startup.<>c__DisplayClass4_0.<ConfigureServices>b__0(DbContextOptionsBuilder options) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Startup.cs:line 68
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass1_0`2.<AddDbContext>b__0(IServiceProvider p, DbContextOptionsBuilder b)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.DbContextOptionsFactory[TContext](IServiceProvider applicationServiceProvider, Action`2 optionsAction)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass10_0`1.<AddCoreServices>b__0(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitTransient(TransientCallSite transientCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitTransient(TransientCallSite transientCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.Internal.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String shutdownMessage)
+2023-11-24T17:20:05.8508229-04:00  [FTL] Application startup exception (6c57a5ba)
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotEmpty(String value, String parameterName)
+   at Microsoft.EntityFrameworkCore.SqlServerDbContextOptionsExtensions.UseSqlServer(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 sqlServerOptionsAction)
+   at Exceler8_API.Startup.<>c__DisplayClass4_0.<ConfigureServices>b__0(DbContextOptionsBuilder options) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Startup.cs:line 68
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass1_0`2.<AddDbContext>b__0(IServiceProvider p, DbContextOptionsBuilder b)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.DbContextOptionsFactory[TContext](IServiceProvider applicationServiceProvider, Action`2 optionsAction)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass10_0`1.<AddCoreServices>b__0(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitTransient(TransientCallSite transientCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitTransient(TransientCallSite transientCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass4_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.Internal.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.WebHostExtensions.RunAsync(IWebHost host, CancellationToken token, String shutdownMessage)
+2023-11-24T18:24:46.1067143-04:00 0HMVD7GKUNUFP:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html   (ca22a1cb)
+2023-11-24T18:24:46.3412082-04:00 0HMVD7GKUNUFP:00000001 [INF] Request finished in 239.422ms 200 text/html (791a596a)
+2023-11-24T18:24:46.5218264-04:00 0HMVD7GKUNUFP:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/backend/swagger/v1/swagger.json   (ca22a1cb)
+2023-11-24T18:24:47.0806664-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"DaysPerWeek"' on entity type '"CapacitySimShift"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0808440-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"HoursPerDay"' on entity type '"CapacitySimShift"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0808828-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"DollarValue"' on entity type '"DollarRate"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0809187-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"Id"' on entity type '"PcaModel"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0809525-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"Id"' on entity type '"PcaProduct"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0809856-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"Id"' on entity type '"PermissionGroup"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0809986-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"Version"' on entity type '"PermissionGroup"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0810682-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"TargetDays"' on entity type '"Target"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0810952-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"TargetPercentage"' on entity type '"Target"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0811575-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"Id"' on entity type '"AccessAudit"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0811748-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"Version"' on entity type '"AccessAudit"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0812003-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"Id"' on entity type '"Business"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0812362-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"Value"' on entity type '"QualityTarget"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0812565-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"Id"' on entity type '"SegmentCode"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.0812681-04:00 0HMVD7GKUNUFP:00000002 [WRN] No type was specified for the decimal column '"Version"' on entity type '"SegmentCode"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. (3a0db05f)
+2023-11-24T18:24:47.1170159-04:00 0HMVD7GKUNUFP:00000002 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"WaziContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2023-11-24T18:25:58.9923239-04:00 0HMVD7GKUNUFQ:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html   (ca22a1cb)
+2023-11-24T18:25:58.9932513-04:00 0HMVD7GKUNUFQ:00000001 [INF] Request finished in 0.9486ms 200 text/html (791a596a)
+2023-11-24T18:25:59.0743555-04:00 0HMVD7GKUNUFQ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/backend/swagger/v1/swagger.json   (ca22a1cb)
+2023-11-24T18:25:59.1177728-04:00 0HMVD7GKUNUFQ:00000002 [ERR] An exception occurred in the database while saving changes for context type '"Exceler8_Domain.Repositories.Config.WaziContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Exceler8_Domain.Repositories.Config.GenericRepositoryNew`1.Create(TEntity entity) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Repositories\Base\Config\GenericRepository.cs:line 66
+   at Exceler8_Domain.Services.LogService.Save(Log log) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Services\LogService.cs:line 18
+   at Exceler8_API.Handlers.ExceptionHandler.Invoke(HttpContext context) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Handlers\ExceptionHandler.cs:line 38
+2023-11-24T18:25:59.1187629-04:00 0HMVD7GKUNUFQ:00000002 [INF] Request finished in 44.4251ms 404  (791a596a)
+2023-11-24T18:26:02.1377226-04:00 0HMVD7GKUNUFQ:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html   (ca22a1cb)
+2023-11-24T18:26:02.1380041-04:00 0HMVD7GKUNUFQ:00000003 [INF] Request finished in 0.3236ms 200 text/html (791a596a)
+2023-11-24T18:26:02.2012789-04:00 0HMVD7GKUNUFQ:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:5000/backend/swagger/v1/swagger.json   (ca22a1cb)
+2023-11-24T18:26:02.2023642-04:00 0HMVD7GKUNUFQ:00000004 [ERR] An exception occurred in the database while saving changes for context type '"Exceler8_Domain.Repositories.Config.WaziContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+2023-11-24T18:26:02.2027160-04:00 0HMVD7GKUNUFQ:00000004 [INF] Request finished in 1.4587ms 404  (791a596a)
+2023-11-24T18:26:05.2966020-04:00 0HMVD7GKUNUFQ:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json   (ca22a1cb)
+2023-11-24T18:26:05.7996648-04:00 0HMVD7GKUNUFQ:00000005 [INF] Request finished in 503.171ms 200 application/json;charset=utf-8 (791a596a)
+2023-11-24T18:26:15.7353155-04:00 0HMVD7GKUNUFQ:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:5000/backend/swagger/v1/swagger.json   (ca22a1cb)
+2023-11-24T18:26:15.7358928-04:00 0HMVD7GKUNUFQ:00000006 [ERR] An exception occurred in the database while saving changes for context type '"Exceler8_Domain.Repositories.Config.WaziContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Exceler8_Domain.Repositories.Config.GenericRepositoryNew`1.Create(TEntity entity) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Repositories\Base\Config\GenericRepository.cs:line 66
+   at Exceler8_Domain.Services.LogService.Save(Log log) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Services\LogService.cs:line 18
+   at Exceler8_API.Handlers.ExceptionHandler.Invoke(HttpContext context) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Handlers\ExceptionHandler.cs:line 38
+2023-11-24T18:26:15.7360045-04:00 0HMVD7GKUNUFQ:00000006 [INF] Request finished in 0.7497ms 404  (791a596a)
+2023-11-24T18:26:27.2968973-04:00 0HMVD7GKUNUFP:00000002 [ERR] An error occurred using the connection to database '"p_wazi"' on server '"10.110.10.220"'. (5fc3407c)
+System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (258): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:7cc816bf-84e0-461b-abf4-a98cf313058e
+Error Number:258,State:0,Class:20
+2023-11-24T18:26:27.3119535-04:00 0HMVD7GKUNUFP:00000002 [ERR] An exception occurred in the database while saving changes for context type '"Exceler8_Domain.Repositories.Config.WaziContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (258): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+ClientConnectionId:7cc816bf-84e0-461b-abf4-a98cf313058e
+Error Number:258,State:0,Class:20" (170f029e)
+System.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: SSL Provider, error: 0 - The wait operation timed out.) ---> System.ComponentModel.Win32Exception (258): The wait operation timed out
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Exceler8_Domain.Repositories.Config.GenericRepositoryNew`1.Create(TEntity entity) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Repositories\Base\Config\GenericRepository.cs:line 66
+   at Exceler8_Domain.Services.LogService.Save(Log log) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Services\LogService.cs:line 18
+   at Exceler8_API.Handlers.ExceptionHandler.Invoke(HttpContext context) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Handlers\ExceptionHandler.cs:line 38
+ClientConnectionId:7cc816bf-84e0-461b-abf4-a98cf313058e
+Error Number:258,State:0,Class:20
+2023-11-24T18:26:27.3120945-04:00 0HMVD7GKUNUFP:00000002 [INF] Request finished in 100796.9475ms 0  (791a596a)
+2023-11-24T18:27:31.4346728-04:00 0HMVD7GKUNUFQ:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json   (ca22a1cb)
+2023-11-24T18:27:31.5334854-04:00 0HMVD7GKUNUFQ:00000007 [INF] Request finished in 98.7347ms 200 application/json;charset=utf-8 (791a596a)
+2023-11-24T18:27:40.8360032-04:00 0HMVD7GKUNUFR:00000001 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/Login   (ca22a1cb)
+2023-11-24T18:27:40.8374335-04:00 0HMVD7GKUNUFR:00000001 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:40.8382100-04:00 0HMVD7GKUNUFR:00000001 [INF] Request finished in 2.2483ms 204  (791a596a)
+2023-11-24T18:27:40.8397073-04:00 0HMVD7GKUNUFR:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/Login application/json 161 (ca22a1cb)
+2023-11-24T18:27:40.8398157-04:00 0HMVD7GKUNUFR:00000002 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:40.8593253-04:00 0HMVD7GKUNUFR:00000002 [INF] Route matched with "{action = \"Post\", controller = \"Login\"}". Executing controller action with signature "System.Object Post(Exceler8_API.Security.AccessCredentials, Exceler8_API.Security.AccessManager)" on controller "Exceler8_API.Controllers.LoginController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:40.9066008-04:00 0HMVD7GKUNUFR:00000002 [INF] Executing action method "Exceler8_API.Controllers.LoginController.Post (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:45.2287803-04:00 0HMVD7GKUNUFR:00000002 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"WaziContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2023-11-24T18:27:45.8364342-04:00 0HMVD7GKUNUFR:00000002 [INF] Executed DbCommand ("264"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserAccess] ([DateRegister], [Url], [UserId])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [UserAccess]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2023-11-24T18:27:46.0507787-04:00 0HMVD7GKUNUFR:00000002 [INF] Executed action method "Exceler8_API.Controllers.LoginController.Post (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 5143.7018ms. (50a9e262)
+2023-11-24T18:27:46.0548972-04:00 0HMVD7GKUNUFR:00000002 [INF] Executing ObjectResult, writing value of type '"Exceler8_API.Security.Token"'. (8a1b66c8)
+2023-11-24T18:27:46.0611320-04:00 0HMVD7GKUNUFR:00000002 [INF] Executed action "Exceler8_API.Controllers.LoginController.Post (Exceler8_API)" in 5201.2128ms (afa2e885)
+2023-11-24T18:27:46.5536979-04:00 0HMVD7GKUNUFR:00000002 [INF] Executed DbCommand ("196"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int64), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Int64), @p10='?' (DbType = DateTime2), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Int64), @p15='?' (DbType = DateTime2), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Int64), @p20='?' (DbType = DateTime2), @p21='?' (DbType = DateTime2), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] bigint, [_Position] [int]);
+MERGE [Log] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3),
+(@p20, @p21, @p22, @p23, @p24, 4)) AS i ([DateTimeFinish], [DateTimeInit], [Path], [Query], [UserId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([DateTimeFinish], [DateTimeInit], [Path], [Query], [UserId])
+VALUES (i.[DateTimeFinish], i.[DateTimeInit], i.[Path], i.[Query], i.[UserId])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Log] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];" (0723d8ff)
+2023-11-24T18:27:46.7147173-04:00 0HMVD7GKUNUFR:00000002 [INF] Request finished in 5876.1562ms 200 application/json; charset=utf-8 (791a596a)
+2023-11-24T18:27:46.7776560-04:00 0HMVD7GKUNUFR:00000003 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/UserAccess?url=/home   (ca22a1cb)
+2023-11-24T18:27:46.7777087-04:00 0HMVD7GKUNUFR:00000003 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:46.7777766-04:00 0HMVD7GKUNUFR:00000003 [INF] Request finished in 0.1678ms 204  (791a596a)
+2023-11-24T18:27:46.7790501-04:00 0HMVD7GKUNUFR:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/UserAccess?url=/home application/json 5 (ca22a1cb)
+2023-11-24T18:27:46.7791068-04:00 0HMVD7GKUNUFR:00000004 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:46.7810434-04:00 0HMVD7GKUNUFS:00000001 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/Account/Menu   (ca22a1cb)
+2023-11-24T18:27:46.7811710-04:00 0HMVD7GKUNUFS:00000001 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:46.7812760-04:00 0HMVD7GKUNUFS:00000001 [INF] Request finished in 0.2837ms 204  (791a596a)
+2023-11-24T18:27:46.7821570-04:00 0HMVD7GKUNUFR:00000004 [INF] Route matched with "{action = \"Create\", controller = \"UserAccess\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create(System.String)" on controller "Exceler8_API.Controllers.UserAccessController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:46.7868022-04:00 0HMVD7GKUNUFS:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Account/Menu application/json  (ca22a1cb)
+2023-11-24T18:27:46.7869171-04:00 0HMVD7GKUNUFS:00000002 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:46.7882904-04:00 0HMVD7GKUNUFS:00000002 [INF] Route matched with "{action = \"GetMenu\", controller = \"Account\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[Exceler8_API.Controllers.MenuAccount]] GetMenu()" on controller "Exceler8_API.Controllers.AccountController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:46.8193424-04:00 0HMVD7GKUNUFR:00000004 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:46.8193383-04:00 0HMVD7GKUNUFS:00000002 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:46.8242876-04:00 0HMVD7GKUNUFR:00000004 [INF] Authorization was successful. (0d575a54)
+2023-11-24T18:27:46.8242998-04:00 0HMVD7GKUNUFS:00000002 [INF] Authorization was successful. (0d575a54)
+2023-11-24T18:27:46.8252401-04:00 0HMVD7GKUNUFS:00000002 [INF] Executing action method "Exceler8_API.Controllers.AccountController.GetMenu (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:46.8294416-04:00 0HMVD7GKUNUFR:00000004 [INF] Executing action method "Exceler8_API.Controllers.UserAccessController.Create (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:46.8303604-04:00 0HMVD7GKUNUFR:00000004 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"WaziContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2023-11-24T18:27:47.2587519-04:00 0HMVD7GKUNUFR:00000004 [INF] Executed DbCommand ("190"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserAccess] ([DateRegister], [Url], [UserId])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [UserAccess]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2023-11-24T18:27:47.4185390-04:00 0HMVD7GKUNUFR:00000004 [INF] Executed action method "Exceler8_API.Controllers.UserAccessController.Create (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 589.0716ms. (50a9e262)
+2023-11-24T18:27:47.4203937-04:00 0HMVD7GKUNUFR:00000004 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2023-11-24T18:27:47.4205448-04:00 0HMVD7GKUNUFR:00000004 [INF] Executed action "Exceler8_API.Controllers.UserAccessController.Create (Exceler8_API)" in 638.4387ms (afa2e885)
+2023-11-24T18:27:47.7510870-04:00 0HMVD7GKUNUFR:00000004 [INF] Executed DbCommand ("162"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Log] ([DateTimeFinish], [DateTimeInit], [Path], [Query], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Log]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2023-11-24T18:27:47.9085536-04:00 0HMVD7GKUNUFR:00000004 [INF] Request finished in 1129.7478ms 200  (791a596a)
+2023-11-24T18:27:47.9096112-04:00  [INF] Connection id ""0HMVD7GKUNUFR"", Request id ""0HMVD7GKUNUFR:00000004"": the application completed without reading the entire request body. (54ac9468)
+2023-11-24T18:27:50.2510591-04:00 0HMVD7GKUNUFS:00000002 [INF] Executed action method "Exceler8_API.Controllers.AccountController.GetMenu (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 3426.3966ms. (50a9e262)
+2023-11-24T18:27:50.2512653-04:00 0HMVD7GKUNUFS:00000002 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Exceler8_API.Controllers.MenuAccount, Exceler8_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2023-11-24T18:27:50.2532527-04:00 0HMVD7GKUNUFS:00000002 [INF] Executed action "Exceler8_API.Controllers.AccountController.GetMenu (Exceler8_API)" in 3465.5631ms (afa2e885)
+2023-11-24T18:27:50.6308929-04:00 0HMVD7GKUNUFS:00000002 [INF] Executed DbCommand ("182"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Log] ([DateTimeFinish], [DateTimeInit], [Path], [Query], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Log]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2023-11-24T18:27:50.7898908-04:00 0HMVD7GKUNUFS:00000002 [INF] Request finished in 4003.867ms 200 application/json; charset=utf-8 (791a596a)
+2023-11-24T18:27:54.5320193-04:00 0HMVD7GKUNUFS:00000003 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/UserAccess?url=/other-reports/order-management   (ca22a1cb)
+2023-11-24T18:27:54.5320650-04:00 0HMVD7GKUNUFS:00000003 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.5321238-04:00 0HMVD7GKUNUFS:00000003 [INF] Request finished in 0.1433ms 204  (791a596a)
+2023-11-24T18:27:54.5333245-04:00 0HMVD7GKUNUFS:00000004 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/UserAccess?url=/other-reports/order-management application/json 31 (ca22a1cb)
+2023-11-24T18:27:54.5333703-04:00 0HMVD7GKUNUFS:00000004 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.5336268-04:00 0HMVD7GKUNUFS:00000004 [INF] Route matched with "{action = \"Create\", controller = \"UserAccess\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create(System.String)" on controller "Exceler8_API.Controllers.UserAccessController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:54.5351562-04:00 0HMVD7GKUNUFR:00000005 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/OrderManagement/InitialDate   (ca22a1cb)
+2023-11-24T18:27:54.5352149-04:00 0HMVD7GKUNUFR:00000005 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.5352893-04:00 0HMVD7GKUNUFR:00000005 [INF] Request finished in 0.1723ms 204  (791a596a)
+2023-11-24T18:27:54.5356097-04:00 0HMVD7GKUNUFS:00000004 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:54.5358909-04:00 0HMVD7GKUNUFS:00000004 [INF] Authorization was successful. (0d575a54)
+2023-11-24T18:27:54.5362318-04:00 0HMVD7GKUNUFS:00000004 [INF] Executing action method "Exceler8_API.Controllers.UserAccessController.Create (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:54.5364449-04:00 0HMVD7GKUNUFS:00000004 [INF] Entity Framework Core "2.2.6-servicing-10079" initialized '"WaziContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2023-11-24T18:27:54.5372344-04:00 0HMVD7GKUNUFT:00000001 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/OpenOrdersList/GetLastImportDateShortage/   (ca22a1cb)
+2023-11-24T18:27:54.5372549-04:00 0HMVD7GKUNUFR:00000006 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/OpenOrdersList/GetShortageList   (ca22a1cb)
+2023-11-24T18:27:54.5373025-04:00 0HMVD7GKUNUFT:00000001 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.5373179-04:00 0HMVD7GKUNUFR:00000006 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.5373684-04:00 0HMVD7GKUNUFT:00000001 [INF] Request finished in 0.1752ms 204  (791a596a)
+2023-11-24T18:27:54.5373742-04:00 0HMVD7GKUNUFR:00000006 [INF] Request finished in 0.1428ms 204  (791a596a)
+2023-11-24T18:27:54.5490195-04:00 0HMVD7GKUNUFT:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/OrderManagement/InitialDate application/json  (ca22a1cb)
+2023-11-24T18:27:54.5490953-04:00 0HMVD7GKUNUFT:00000002 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.5492378-04:00 0HMVD7GKUNUFR:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/OpenOrdersList/GetLastImportDateShortage/ application/json  (ca22a1cb)
+2023-11-24T18:27:54.5493077-04:00 0HMVD7GKUNUFR:00000007 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.5499280-04:00 0HMVD7GKUNUFU:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/OpenOrdersList/GetShortageList application/json  (ca22a1cb)
+2023-11-24T18:27:54.5499737-04:00 0HMVD7GKUNUFU:00000001 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.5522536-04:00 0HMVD7GKUNUFR:00000007 [INF] Route matched with "{action = \"GetLastImportDateShortage\", controller = \"OpenOrdersList\"}". Executing controller action with signature "System.DateTime GetLastImportDateShortage()" on controller "Exceler8_API.Controllers.OpenOrdersListController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:54.5522565-04:00 0HMVD7GKUNUFT:00000002 [INF] Route matched with "{action = \"InitialDate\", controller = \"OrderManagement\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult InitialDate()" on controller "Exceler8_API.Controllers.OrderManagementController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:54.5541249-04:00 0HMVD7GKUNUFT:00000002 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:54.5542337-04:00 0HMVD7GKUNUFT:00000002 [INF] Authorization was successful. (0d575a54)
+2023-11-24T18:27:54.5547004-04:00 0HMVD7GKUNUFR:00000007 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:54.5547908-04:00 0HMVD7GKUNUFR:00000007 [INF] Authorization was successful. (0d575a54)
+2023-11-24T18:27:54.5553190-04:00 0HMVD7GKUNUFU:00000001 [INF] Route matched with "{action = \"GetShortageList\", controller = \"OpenOrdersList\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetShortageList(Exceler8_Domain.Enums.SegmentCodeEnum, Exceler8_Domain.Enums.BusinessEnum, Exceler8_Domain.Enums.OpenOrderTypeEnum, System.String, Int32)" on controller "Exceler8_API.Controllers.OpenOrdersListController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:54.5557805-04:00 0HMVD7GKUNUFR:00000007 [INF] Executing action method "Exceler8_API.Controllers.OpenOrdersListController.GetLastImportDateShortage (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:54.5569727-04:00 0HMVD7GKUNUFT:00000002 [INF] Executing action method "Exceler8_API.Controllers.OrderManagementController.InitialDate (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:54.5571960-04:00 0HMVD7GKUNUFU:00000001 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:54.5572974-04:00 0HMVD7GKUNUFU:00000001 [INF] Authorization was successful. (0d575a54)
+2023-11-24T18:27:54.5576382-04:00 0HMVD7GKUNUFU:00000001 [INF] Executing action method "Exceler8_API.Controllers.OpenOrdersListController.GetShortageList (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:54.6153929-04:00 0HMVD7GKUNUFV:00000001 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/Versioning/LastVersion   (ca22a1cb)
+2023-11-24T18:27:54.6154611-04:00 0HMVD7GKUNUFV:00000001 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.6155226-04:00 0HMVD7GKUNUFV:00000001 [INF] Request finished in 0.168ms 204  (791a596a)
+2023-11-24T18:27:54.6177773-04:00 0HMVD7GKUNUFV:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Versioning/LastVersion application/json  (ca22a1cb)
+2023-11-24T18:27:54.6178224-04:00 0HMVD7GKUNUFV:00000002 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.6187036-04:00 0HMVD7GKUNUFV:00000002 [INF] Route matched with "{action = \"GetLastVersion\", controller = \"Versioning\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetLastVersion()" on controller "Exceler8_API.Controllers.VersioningController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:54.6204766-04:00 0HMVD7GKUNUFV:00000002 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:54.6208897-04:00 0HMVD7GKUNUFV:00000002 [INF] Executing action method "Exceler8_API.Controllers.VersioningController.GetLastVersion (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:54.7964009-04:00 0HMVD7GKUNUFR:00000007 [INF] Executed action method "Exceler8_API.Controllers.OpenOrdersListController.GetLastImportDateShortage (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 240.6061ms. (50a9e262)
+2023-11-24T18:27:54.7964884-04:00 0HMVD7GKUNUFR:00000007 [INF] Executing ObjectResult, writing value of type '"System.DateTime"'. (8a1b66c8)
+2023-11-24T18:27:54.7998140-04:00 0HMVD7GKUNUFR:00000007 [INF] Executed action "Exceler8_API.Controllers.OpenOrdersListController.GetLastImportDateShortage (Exceler8_API)" in 247.5274ms (afa2e885)
+2023-11-24T18:27:54.9593952-04:00 0HMVD7GKUNUFS:00000004 [INF] Executed DbCommand ("186"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserAccess] ([DateRegister], [Url], [UserId])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [UserAccess]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2023-11-24T18:27:54.9601318-04:00 0HMVD7GKUNUFT:00000002 [INF] Executed action method "Exceler8_API.Controllers.OrderManagementController.InitialDate (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 403.1604ms. (50a9e262)
+2023-11-24T18:27:54.9602654-04:00 0HMVD7GKUNUFT:00000002 [INF] Executing ObjectResult, writing value of type '"Exceler8_Domain.DTOs.InitialDate"'. (8a1b66c8)
+2023-11-24T18:27:54.9614085-04:00 0HMVD7GKUNUFT:00000002 [INF] Executed action "Exceler8_API.Controllers.OrderManagementController.InitialDate (Exceler8_API)" in 409.1842ms (afa2e885)
+2023-11-24T18:27:54.9618959-04:00 0HMVD7GKUNUFT:00000002 [ERR] An exception occurred in the database while saving changes for context type '"Exceler8_Domain.Repositories.Config.WaziContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Exceler8_Domain.Repositories.Config.GenericRepositoryNew`1.Create(TEntity entity) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Repositories\Base\Config\GenericRepository.cs:line 66
+   at Exceler8_Domain.Services.LogService.Save(Log log) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Services\LogService.cs:line 18
+   at Exceler8_API.Handlers.ExceptionHandler.Invoke(HttpContext context) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Handlers\ExceptionHandler.cs:line 38
+2023-11-24T18:27:54.9620069-04:00 0HMVD7GKUNUFT:00000002 [INF] Request finished in 413.1394ms 200 application/json; charset=utf-8 (791a596a)
+2023-11-24T18:27:54.9678713-04:00 0HMVD7GKUNUFT:00000003 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/OrderManagement/Product   (ca22a1cb)
+2023-11-24T18:27:54.9679298-04:00 0HMVD7GKUNUFT:00000003 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.9680033-04:00 0HMVD7GKUNUFT:00000003 [INF] Request finished in 0.1789ms 204  (791a596a)
+2023-11-24T18:27:54.9697547-04:00 0HMVD7GKUNUFT:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/OrderManagement/Product application/json  (ca22a1cb)
+2023-11-24T18:27:54.9698031-04:00 0HMVD7GKUNUFT:00000004 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:54.9709431-04:00 0HMVD7GKUNUFT:00000004 [INF] Route matched with "{action = \"Product\", controller = \"OrderManagement\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Product()" on controller "Exceler8_API.Controllers.OrderManagementController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:54.9729733-04:00 0HMVD7GKUNUFT:00000004 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:54.9730718-04:00 0HMVD7GKUNUFT:00000004 [INF] Authorization was successful. (0d575a54)
+2023-11-24T18:27:54.9731471-04:00 0HMVD7GKUNUFT:00000004 [INF] Executing action method "Exceler8_API.Controllers.OrderManagementController.Product (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:55.1441056-04:00 0HMVD7GKUNUFS:00000004 [INF] Executed action method "Exceler8_API.Controllers.UserAccessController.Create (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 607.8914ms. (50a9e262)
+2023-11-24T18:27:55.1441363-04:00 0HMVD7GKUNUFV:00000002 [INF] Executed action method "Exceler8_API.Controllers.VersioningController.GetLastVersion (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 523.2489ms. (50a9e262)
+2023-11-24T18:27:55.1442690-04:00 0HMVD7GKUNUFV:00000002 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (8a1b66c8)
+2023-11-24T18:27:55.1442897-04:00 0HMVD7GKUNUFS:00000004 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2023-11-24T18:27:55.1443675-04:00 0HMVD7GKUNUFS:00000004 [INF] Executed action "Exceler8_API.Controllers.UserAccessController.Create (Exceler8_API)" in 610.8143ms (afa2e885)
+2023-11-24T18:27:55.1445843-04:00 0HMVD7GKUNUFV:00000002 [INF] Executed action "Exceler8_API.Controllers.VersioningController.GetLastVersion (Exceler8_API)" in 525.932ms (afa2e885)
+2023-11-24T18:27:55.1449917-04:00 0HMVD7GKUNUFS:00000004 [ERR] An exception occurred in the database while saving changes for context type '"Exceler8_Domain.Repositories.Config.WaziContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Exceler8_Domain.Repositories.Config.GenericRepositoryNew`1.Create(TEntity entity) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Repositories\Base\Config\GenericRepository.cs:line 66
+   at Exceler8_Domain.Services.LogService.Save(Log log) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Services\LogService.cs:line 18
+   at Exceler8_API.Handlers.ExceptionHandler.Invoke(HttpContext context) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Handlers\ExceptionHandler.cs:line 38
+2023-11-24T18:27:55.1450401-04:00 0HMVD7GKUNUFV:00000002 [ERR] An exception occurred in the database while saving changes for context type '"Exceler8_Domain.Repositories.Config.WaziContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Exceler8_Domain.Repositories.Config.GenericRepositoryNew`1.Create(TEntity entity) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Repositories\Base\Config\GenericRepository.cs:line 66
+   at Exceler8_Domain.Services.LogService.Save(Log log) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Services\LogService.cs:line 18
+   at Exceler8_API.Handlers.ExceptionHandler.Invoke(HttpContext context) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Handlers\ExceptionHandler.cs:line 38
+2023-11-24T18:27:55.1451385-04:00 0HMVD7GKUNUFV:00000002 [INF] Request finished in 527.5239ms 200 application/json; charset=utf-8 (791a596a)
+2023-11-24T18:27:55.1451429-04:00 0HMVD7GKUNUFS:00000004 [INF] Request finished in 611.95ms 200  (791a596a)
+2023-11-24T18:27:55.1451883-04:00  [INF] Connection id ""0HMVD7GKUNUFS"", Request id ""0HMVD7GKUNUFS:00000004"": the application completed without reading the entire request body. (54ac9468)
+2023-11-24T18:27:55.3155047-04:00 0HMVD7GKUNUFT:00000004 [INF] Executed action method "Exceler8_API.Controllers.OrderManagementController.Product (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 342.3622ms. (50a9e262)
+2023-11-24T18:27:55.3156518-04:00 0HMVD7GKUNUFT:00000004 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Exceler8_Domain.Models.Business, Exceler8_Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2023-11-24T18:27:55.3175186-04:00 0HMVD7GKUNUFT:00000004 [INF] Executed action "Exceler8_API.Controllers.OrderManagementController.Product (Exceler8_API)" in 346.5793ms (afa2e885)
+2023-11-24T18:27:55.3179768-04:00 0HMVD7GKUNUFT:00000004 [ERR] An exception occurred in the database while saving changes for context type '"Exceler8_Domain.Repositories.Config.WaziContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Exceler8_Domain.Repositories.Config.GenericRepositoryNew`1.Create(TEntity entity) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Repositories\Base\Config\GenericRepository.cs:line 66
+   at Exceler8_Domain.Services.LogService.Save(Log log) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Services\LogService.cs:line 18
+   at Exceler8_API.Handlers.ExceptionHandler.Invoke(HttpContext context) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Handlers\ExceptionHandler.cs:line 38
+2023-11-24T18:27:55.3180822-04:00 0HMVD7GKUNUFT:00000004 [INF] Request finished in 348.4349ms 200 application/json; charset=utf-8 (791a596a)
+2023-11-24T18:27:55.3214427-04:00 0HMVD7GKUNUFT:00000005 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/ManufacturedProduct/GetSKU?groupSegmentType=ComputingFull   (ca22a1cb)
+2023-11-24T18:27:55.3215215-04:00 0HMVD7GKUNUFT:00000005 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:55.3216363-04:00 0HMVD7GKUNUFT:00000005 [INF] Request finished in 0.2587ms 204  (791a596a)
+2023-11-24T18:27:55.3231441-04:00 0HMVD7GKUNUFT:00000006 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/ManufacturedProduct/GetSKU?groupSegmentType=ComputingFull application/json  (ca22a1cb)
+2023-11-24T18:27:55.3231920-04:00 0HMVD7GKUNUFT:00000006 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:55.3262866-04:00 0HMVD7GKUNUFT:00000006 [INF] Route matched with "{action = \"GetSKU\", controller = \"ManufacturedProduct\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetSKU(Exceler8_Domain.Entities.GroupSegmentEnum, Exceler8_Domain.Enums.SegmentCodeEnum, System.Collections.Generic.List`1[Exceler8_Domain.Enums.BusinessEnum], System.Collections.Generic.List`1[System.String], System.Collections.Generic.List`1[System.String], System.Collections.Generic.List`1[System.String])" on controller "Exceler8_API.Controllers.ManufacturedProductController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:55.3283003-04:00 0HMVD7GKUNUFT:00000006 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:55.3283836-04:00 0HMVD7GKUNUFT:00000006 [INF] Authorization was successful. (0d575a54)
+2023-11-24T18:27:55.3398619-04:00 0HMVD7GKUNUFT:00000006 [INF] Executing action method "Exceler8_API.Controllers.ManufacturedProductController.GetSKU (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:55.4751602-04:00 0HMVD7GKUNUFR:00000007 [INF] Executed DbCommand ("170"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Log] ([DateTimeFinish], [DateTimeInit], [Path], [Query], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Log]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2023-11-24T18:27:55.6772690-04:00 0HMVD7GKUNUFR:00000007 [INF] Request finished in 1128.2529ms 200 application/json; charset=utf-8 (791a596a)
+2023-11-24T18:27:56.0867538-04:00 0HMVD7GKUNUFT:00000006 [INF] Executed action method "Exceler8_API.Controllers.ManufacturedProductController.GetSKU (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 746.9595ms. (50a9e262)
+2023-11-24T18:27:56.0868516-04:00 0HMVD7GKUNUFT:00000006 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (8a1b66c8)
+2023-11-24T18:27:56.0879397-04:00 0HMVD7GKUNUFT:00000006 [INF] Executed action "Exceler8_API.Controllers.ManufacturedProductController.GetSKU (Exceler8_API)" in 761.7507ms (afa2e885)
+2023-11-24T18:27:56.4290601-04:00 0HMVD7GKUNUFT:00000006 [INF] Executed DbCommand ("181"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int64), @p5='?' (DbType = DateTime2), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (DbType = Int64), @p10='?' (DbType = DateTime2), @p11='?' (DbType = DateTime2), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Int64), @p15='?' (DbType = DateTime2), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = Int64), @p20='?' (DbType = DateTime2), @p21='?' (DbType = DateTime2), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DECLARE @inserted0 TABLE ([Id] bigint, [_Position] [int]);
+MERGE [Log] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3),
+(@p20, @p21, @p22, @p23, @p24, 4)) AS i ([DateTimeFinish], [DateTimeInit], [Path], [Query], [UserId], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([DateTimeFinish], [DateTimeInit], [Path], [Query], [UserId])
+VALUES (i.[DateTimeFinish], i.[DateTimeInit], i.[Path], i.[Query], i.[UserId])
+OUTPUT INSERTED.[Id], i._Position
+INTO @inserted0;
+
+SELECT [t].[Id] FROM [Log] t
+INNER JOIN @inserted0 i ON ([t].[Id] = [i].[Id])
+ORDER BY [i].[_Position];" (0723d8ff)
+2023-11-24T18:27:56.5880784-04:00 0HMVD7GKUNUFT:00000006 [INF] Request finished in 1265.1437ms 200 application/json; charset=utf-8 (791a596a)
+2023-11-24T18:27:56.5913677-04:00 0HMVD7GKUNUFT:00000007 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/OrderManagement/Table?&&product=4&product=12&product=2&product=1&product=3&&dateFrom=2023-10-27&dateTo=2023-11-27   (ca22a1cb)
+2023-11-24T18:27:56.5914345-04:00 0HMVD7GKUNUFT:00000007 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:56.5915319-04:00 0HMVD7GKUNUFT:00000007 [INF] Request finished in 0.2124ms 204  (791a596a)
+2023-11-24T18:27:56.5916461-04:00 0HMVD7GKUNUFR:00000008 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/OrderManagement/Summary?&&product=4&product=12&product=2&product=1&product=3&&dateFrom=2023-10-27&dateTo=2023-11-27   (ca22a1cb)
+2023-11-24T18:27:56.5916737-04:00 0HMVD7GKUNUFR:00000008 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:56.5917111-04:00 0HMVD7GKUNUFR:00000008 [INF] Request finished in 0.0779ms 204  (791a596a)
+2023-11-24T18:27:56.5936399-04:00 0HMVD7GKUNUFR:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/OrderManagement/Table?&&product=4&product=12&product=2&product=1&product=3&&dateFrom=2023-10-27&dateTo=2023-11-27 application/json  (ca22a1cb)
+2023-11-24T18:27:56.5936866-04:00 0HMVD7GKUNUFR:00000009 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:56.5941495-04:00 0HMVD7GKUNUFT:00000008 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/OrderManagement/Summary?&&product=4&product=12&product=2&product=1&product=3&&dateFrom=2023-10-27&dateTo=2023-11-27 application/json  (ca22a1cb)
+2023-11-24T18:27:56.5941895-04:00 0HMVD7GKUNUFT:00000008 [INF] CORS policy execution successful. (5409d6ef)
+2023-11-24T18:27:56.5963845-04:00 0HMVD7GKUNUFR:00000009 [INF] Route matched with "{action = \"Table\", controller = \"OrderManagement\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Table(Exceler8_Domain.DTOs.OrderManagementFilters)" on controller "Exceler8_API.Controllers.OrderManagementController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:56.5963846-04:00 0HMVD7GKUNUFT:00000008 [INF] Route matched with "{action = \"Summary\", controller = \"OrderManagement\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Summary(Exceler8_Domain.DTOs.OrderManagementFilters)" on controller "Exceler8_API.Controllers.OrderManagementController" ("Exceler8_API"). (122b2fdf)
+2023-11-24T18:27:56.5983237-04:00 0HMVD7GKUNUFT:00000008 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:56.5983897-04:00 0HMVD7GKUNUFT:00000008 [INF] Authorization was successful. (0d575a54)
+2023-11-24T18:27:56.5988690-04:00 0HMVD7GKUNUFR:00000009 [INF] Successfully validated the token. (60169667)
+2023-11-24T18:27:56.5989391-04:00 0HMVD7GKUNUFR:00000009 [INF] Authorization was successful. (0d575a54)
+2023-11-24T18:27:56.6076602-04:00 0HMVD7GKUNUFR:00000009 [INF] Executing action method "Exceler8_API.Controllers.OrderManagementController.Table (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:27:56.6076602-04:00 0HMVD7GKUNUFT:00000008 [INF] Executing action method "Exceler8_API.Controllers.OrderManagementController.Summary (Exceler8_API)" - Validation state: Valid (dad538d7)
+2023-11-24T18:28:00.5959359-04:00 0HMVD7GKUNUFR:00000009 [INF] Executed action method "Exceler8_API.Controllers.OrderManagementController.Table (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3988.9787ms. (50a9e262)
+2023-11-24T18:28:00.5960524-04:00 0HMVD7GKUNUFR:00000009 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Exceler8_Domain.DTOs.PurchaseOrderFull, Exceler8_Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2023-11-24T18:28:00.6202404-04:00 0HMVD7GKUNUFT:00000008 [INF] Executed action method "Exceler8_API.Controllers.OrderManagementController.Summary (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 4013.2852ms. (50a9e262)
+2023-11-24T18:28:00.6203294-04:00 0HMVD7GKUNUFT:00000008 [INF] Executing ObjectResult, writing value of type '"Exceler8_Domain.DTOs.OrderManagementSummary"'. (8a1b66c8)
+2023-11-24T18:28:00.6238333-04:00 0HMVD7GKUNUFT:00000008 [INF] Executed action "Exceler8_API.Controllers.OrderManagementController.Summary (Exceler8_API)" in 4028.1578ms (afa2e885)
+2023-11-24T18:28:00.6470181-04:00 0HMVD7GKUNUFR:00000009 [INF] Executed action "Exceler8_API.Controllers.OrderManagementController.Table (Exceler8_API)" in 4051.3464ms (afa2e885)
+2023-11-24T18:28:00.6474891-04:00 0HMVD7GKUNUFR:00000009 [ERR] An exception occurred in the database while saving changes for context type '"Exceler8_Domain.Repositories.Config.WaziContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Exceler8_Domain.Repositories.Config.GenericRepositoryNew`1.Create(TEntity entity) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Repositories\Base\Config\GenericRepository.cs:line 66
+   at Exceler8_Domain.Services.LogService.Save(Log log) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Services\LogService.cs:line 18
+   at Exceler8_API.Handlers.ExceptionHandler.Invoke(HttpContext context) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Handlers\ExceptionHandler.cs:line 38
+2023-11-24T18:28:00.6475806-04:00 0HMVD7GKUNUFR:00000009 [INF] Request finished in 4054.7543ms 200 application/json; charset=utf-8 (791a596a)
+2023-11-24T18:28:00.8040866-04:00 0HMVD7GKUNUFU:00000001 [INF] Executed action method "Exceler8_API.Controllers.OpenOrdersListController.GetShortageList (Exceler8_API)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 6247.562ms. (50a9e262)
+2023-11-24T18:28:00.8042278-04:00 0HMVD7GKUNUFU:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[Exceler8_Domain.DTOs.ShortageListDTO, Exceler8_Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2023-11-24T18:28:00.8178929-04:00 0HMVD7GKUNUFU:00000001 [INF] Executed action "Exceler8_API.Controllers.OpenOrdersListController.GetShortageList (Exceler8_API)" in 6263.7076ms (afa2e885)
+2023-11-24T18:28:00.8183496-04:00 0HMVD7GKUNUFU:00000001 [ERR] An exception occurred in the database while saving changes for context type '"Exceler8_Domain.Repositories.Config.WaziContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)" (170f029e)
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext, however instance members are not guaranteed to be thread safe. This could also be caused by a nested query being evaluated on the client, if this is the case rewrite the query avoiding nested invocations.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Exceler8_Domain.Repositories.Config.GenericRepositoryNew`1.Create(TEntity entity) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Repositories\Base\Config\GenericRepository.cs:line 66
+   at Exceler8_Domain.Services.LogService.Save(Log log) in C:\dev\hp\hp_exceler_web\backend\Exceler8_Domain\Services\LogService.cs:line 18
+   at Exceler8_API.Handlers.ExceptionHandler.Invoke(HttpContext context) in C:\dev\hp\hp_exceler_web\backend\Exceler8_API\Handlers\ExceptionHandler.cs:line 38
+2023-11-24T18:28:00.8184395-04:00 0HMVD7GKUNUFU:00000001 [INF] Request finished in 6269.7429ms 200 application/json; charset=utf-8 (791a596a)
+2023-11-24T18:28:01.0409032-04:00 0HMVD7GKUNUFT:00000008 [INF] Executed DbCommand ("159"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int64)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Log] ([DateTimeFinish], [DateTimeInit], [Path], [Query], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Log]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();" (0723d8ff)
+2023-11-24T18:28:01.2417999-04:00 0HMVD7GKUNUFT:00000008 [INF] Request finished in 4648.5169ms 200 application/json; charset=utf-8 (791a596a)

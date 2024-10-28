@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row header-row p-3 crud theme-paper">
+    <div class="col-md-11">
+      <span class="title theme-textTertiary">Users List</span>
+    </div>
+
+    <div class="col-md-1 my-auto">
+      <button type="button" class="btn btn-primary" [routerLink]="['crud']">
+        Create
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col px-5">
+      <app-table
+        #table
+        [isLoading]="isLoading.table"
+        [columns]="columns"
+        [settings]="settings"
+        [data]="listUsers || []"
+      >
+      </app-table>
+    </div>
+  </div>
+</div>

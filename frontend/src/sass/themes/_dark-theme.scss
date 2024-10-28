@@ -1,0 +1,170 @@
+$primary: #0096d6;
+$secundary: #ffffff;
+$tertiary: rgba(255, 255, 255, 0.7);
+$disabled: rgba(0, 0, 0, 0.3);
+
+$backgroundColor: url('/assets/images/background.jpg') repeat;
+$paperColor: #1f1f1f;
+$paperShadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+  0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+
+.theme-background {
+  background: $backgroundColor;
+}
+
+.theme-paper {
+  background-color: $paperColor !important;
+  box-shadow: $paperShadow;
+}
+
+.theme-textPrimary {
+  color: $primary;
+}
+
+.theme-textSecundary {
+  color: $secundary;
+}
+
+.theme-textTertiary {
+  color: $tertiary;
+}
+
+.theme-dateInput {
+  input::-webkit-calendar-picker-indicator {
+    background-color: $tertiary !important;
+  }
+}
+
+.theme-select {
+  color: $secundary;
+}
+
+.theme-select option {
+  background-color: $paperColor !important;
+  color: $tertiary;
+}
+
+.theme-material-table {
+  .mat-table {
+    background-color: $paperColor;
+  }
+
+  .mat-header-cell {
+    color: $secundary;
+  }
+
+  .mat-cell {
+    color: $tertiary;
+  }
+
+  .mat-paginator-container {
+    background-color: $paperColor;
+  }
+
+  .mat-icon-button {
+    color: $secundary;
+  }
+
+  .mat-icon-button:disabled {
+    color: $disabled;
+  }
+
+  .mat-paginator-range-label {
+    color: $tertiary;
+  }
+
+  .mat-paginator-page-size {
+    color: $tertiary;
+  }
+
+  .mat-select-value-text {
+    color: $tertiary;
+  }
+
+  .mat-select-arrow {
+    color: $tertiary;
+  }
+
+  .mat-form-field-label {
+    color: $tertiary;
+  }
+
+  .mat-input-element {
+    color: $tertiary;
+  }
+
+  .mat-row.active {
+    background-color: $primary;
+
+    .mat-cell {
+      color: $paperColor;
+    }
+  }
+
+  .btn-primary {
+    background-color: $primary;
+    color: $paperColor;
+  }
+}
+
+.mat-checkbox-ripple .mat-ripple-element,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: $primary !important;
+  color: $paperColor !important;
+}
+
+.mat-checkbox-frame {
+  border-color: $tertiary !important;
+  color: $paperColor !important;
+}
+
+.inputError {
+  border-color: red !important;
+}
+
+.dropdown-list {
+  background-color: $paperColor !important;
+}
+
+.dropdown-list > ul > li > div {
+  color: $tertiary !important;
+}
+
+.multiselect-dropdown {
+  .selected-item {
+    background-color: $primary !important;
+    border: 1px solid $primary !important;
+  }
+}
+
+.chart-item:hover {
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: $paperShadow;
+}
+
+.chart-item-selected {
+  border-radius: 15px;
+  background-color: $paperColor !important;
+  box-shadow: $paperShadow;
+}
+
+.red {
+  color: red;
+}
+
+.margin-family {
+  font-weight: bold;
+}
+
+.margin-family-column-left {
+  text-align: left !important;
+}
+
+.margin-family-column-right {
+  text-align: right !important;
+}
+
+.actual-period-contrast {
+  background-color: lightgray !important;
+}

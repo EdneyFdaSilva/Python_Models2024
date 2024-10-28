@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'FormaDJRMicro';
+  src: url(./FormaDJRMicro-Regular.eot);
+  src: url(./FormaDJRMicro-Regular.eot?#iefix) format('embedded-opentype'),
+       url(./FormaDJRMicro-Regular.otf) format('otf'),
+       url(./FormaDJRMicro-Regular.ttf) format('truetype'),
+       url(./FormaDJRMicro-Regular.svg#FormaDJRMicro-Regular) format('svg'),
+       url(./FormaDJRMicro-Regular.woff) format('woff'),
+       url(./FormaDJRMicro-Regular.woff2) format('woff2');
+}
+
+.hp-visual-identify h1, 
+.hp-visual-identify h2, 
+.hp-visual-identify h3,
+.hp-visual-identify h4,
+.hp-visual-identify h5,
+.hp-visual-identify h6 {
+  font-family: 'FormaDJRMicro' !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+}
+
+.hp-visual-identify *:not(.fa, .fas, .far, .fal, .fab, i){
+  font-family: 'FormaDJRMicro' !important;
+  font-style: normal !important;
+}
+
+.hp-visual-identify i:not(.fa, .fas, .far, .fal, .fab) {
+  font-family: 'FormaDJRMicro' !important;
+  font-style: italic !important;
+}

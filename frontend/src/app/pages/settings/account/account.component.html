@@ -1,0 +1,240 @@
+<div
+  class="d-flex flex-column justify-content-center align-items-center min-vh-100 container"
+>
+  <div class="row w-100">
+    <div class="col-md-12">
+      <form
+        [formGroup]="loginForm"
+        class="theme-paper"
+        (ngSubmit)="update()"
+        *ngIf="!loading"
+        style="padding: 30px;"
+      >
+        <h2 class="theme-textTertiary">Account Settings</h2>
+
+        <img
+          class="img-fluid"
+          [src]="retrievedImage || dafaultImgUrl"
+          id="profileImage"
+        />
+
+        <div class="row">
+          <div class="col-6 form-group">
+            <label for="userRealName">Name</label>
+            <input
+              type="text"
+              class="form-control required"
+              formControlName="userRealName"
+            />
+          </div>
+
+          <div class="col-6 form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control valid"
+              formControlName="email"
+            />
+          </div>
+
+          <div class="col-md-6 form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control required"
+              formControlName="password"
+            />
+          </div>
+
+          <div class="col-md-6 form-group">
+            <label for="passwordConfirm">Repeat Password</label>
+            <input
+              type="password"
+              class="form-control valid"
+              formControlName="passwordConfirm"
+            />
+          </div>
+
+          <div class="col-6 form-group">
+            <label for="phone">Phone</label>
+            <input
+              type="phone"
+              name="phone"
+              id="phone"
+              mask="(00) 00000-0000"
+              class="form-control valid"
+              formControlName="phone"
+            />
+          </div>
+          <div class="col-3 form-group">
+            <label for="functionSelector">Function</label>
+            <select
+              type="select"
+              class="form-control required"
+              formControlName="functionSelector"
+              (change)="functionChanged()"
+            >
+              <option [ngValue]="" disabled>Select a function</option>
+              <option *ngFor="let role of roles" [ngValue]="role.name">
+                {{ role.name }}
+              </option>
+            </select>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label for="function">Other</label>
+              <input
+                type="text"
+                class="form-control required"
+                autocomplete="off"
+                formControlName="function"
+                maxlength="50"
+              />
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label for="countrySelector">Country</label>
+              <select
+                type="select"
+                class="form-control required"
+                formControlName="countrySelector"
+                (change)="countryChanged()"
+              >
+                <option [ngValue]="" disabled>Select a country</option>
+                <option
+                  *ngFor="let country of countries"
+                  [ngValue]="country.name"
+                >
+                  {{ country.name }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label for="country">Other</label>
+              <input
+                type="text"
+                class="form-control required"
+                autocomplete="off"
+                formControlName="country"
+                maxlength="50"
+              />
+            </div>
+          </div>
+          <div class="col-6 form-group">
+            <label for="company">Company</label>
+            <select
+              type="select"
+              class="form-control required"
+              formControlName="company"
+            >
+              <option [ngValue]="" disabled>Select a company</option>
+              <option
+                *ngFor="let company of companies"
+                [ngValue]="company.name"
+              >
+                {{ company.name }}
+              </option>
+            </select>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label for="areaSelector">Area</label>
+              <select
+                type="select"
+                class="form-control required"
+                formControlName="areaSelector"
+                (change)="areaChanged()"
+              >
+                <option [ngValue]="" disabled>Select an area</option>
+                <option *ngFor="let area of areas" [ngValue]="area.name">
+                  {{ area.name }}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label for="area">Other</label>
+              <input
+                type="text"
+                class="form-control required"
+                autocomplete="off"
+                formControlName="area"
+                maxlength="50"
+              />
+            </div>
+          </div>
+          <div class="col-3 form-group">
+            <label for="managerName">Manager Name</label>
+            <select
+              type="select"
+              class="form-control required"
+              formControlName="managerSelector"
+              (change)="setManagerEmail()"
+            >
+              <option [ngValue]="" disabled>Select a manager</option>
+              <option *ngFor="let manager of managers" [ngValue]="manager.name">
+                {{ manager.name }}
+              </option>
+            </select>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label for="managerName">Other</label>
+              <input
+                type="text"
+                class="form-control required"
+                autocomplete="off"
+                formControlName="managerName"
+                maxlength="50"
+              />
+            </div>
+          </div>
+          <div class="col-6 form-group">
+            <label for="phone">Manager E-mail</label>
+            <input
+              type="text"
+              class="form-control required"
+              autocomplete="off"
+              formControlName="managerEmail"
+              maxlength="50"
+            />
+          </div>
+
+          <div class="col-6">
+            <label>Picture</label>
+            <div class="form-group">
+              <input
+                type="file"
+                accept="image/*"
+                (change)="fileProgress($event)"
+                formControlName="photos"
+              />
+            </div>
+            <div class="image-preview mb-3" *ngIf="previewUrl">
+              <img [src]="previewUrl" height="300" />
+            </div>
+          </div>
+        </div>
+        <div class="row buttons-row">
+          <div class="col-md-10"></div>
+          <div class="col-md-2">
+            <button
+              type="submit"
+              class="btn btn-primary btn-block text-white p-2 my-2 shadow-sm"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <app-loading [show]="loading" [size]="'5x'" id="loading"></app-loading>
+    </div>
+  </div>
+</div>

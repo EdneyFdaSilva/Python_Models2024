@@ -102,13 +102,25 @@ df_Severity4_qty['Severity'] = 'SEV 4'
 
 df_sev = pd.concat([df_Severity1_qty,df_Severity2_qty,df_Severity3_qty,df_Severity4_qty],ignore_index=True)
 
+sr_story = df_ttl['Story Points'].squeeze()
+
+df_issuetype['Target'] = 25
+sr_tgt = df_issuetype['Target']
+
+df_issuetype['Average']=18.7
+sr_avg = df_issuetype['Average']
+
+
 col1, col2 = st.columns(2)
 col3, col4, col5 = st.columns(3)
 
 fig_date = px.bar(df_ttl, x=df_ttl.index, y="Story Points", title="Sprint Velocity (Points)",text_auto=True)
+fig_date.add_scatter(name='Target',x=df_ttl.index,y=sr_tgt)
+fig_date.add_scatter(name='Average',x=df_ttl.index,y=sr_avg)
 col1.plotly_chart(fig_date, use_container_width=True)
 
 fig_prod = px.bar(df_issuetype, x='Sprints', y="Quantidade",color="Issue Type", title="Issue Type (Quantity)",orientation="v",text_auto=True)
+fig_prod.add_scatter(name='Story Point',x=df_issuetype['Sprints'],y=sr_story)
 col2.plotly_chart(fig_prod, use_container_width=True)
 
 fig_prod = px.bar(df_sev, x='Sprints', y="Quantidade",color="Severity", title="Issue by Severity (Quantity)",orientation="v",text_auto=True)

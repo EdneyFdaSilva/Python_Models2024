@@ -1,0 +1,45 @@
+<div class="container-fluid theme-background">
+  <form [formGroup]="filterForm" class="form-container">
+    <div class="form-row pt-4">
+      <div class="theme-paper table-toolbar toolbar">
+        <div>
+          <app-radio-field
+            [control]="filterForm.controls.ticketOwner"
+            [field]="fields.ticketOwner"
+          >
+          </app-radio-field>
+
+          <app-dropdown-multi
+            [isLoading]="loading"
+            (onSelect)="onFilterChange($event)"
+            (onDeSelect)="onFilterChange($event)"
+            (onSelectAll)="onFilterChange($event)"
+            (onDeSelectAll)="onFilterChange($event)"
+            [options]="ticketStatusDropDown"
+            [selectedItems]="filters.status"
+            class="Enable-drop-down"
+            [dropdownSettings]="dropdownSettings"
+            [placeholder]="'Status'"
+          ></app-dropdown-multi>
+        </div>
+        <button type="button" class="btn btn-primary" [routerLink]="['crud']">
+          New Ticket
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <!-- TICKETS TABLE -->
+  <div class="row">
+    <div class="col-md-12">
+      <app-table
+        #table
+        [columns]="columns"
+        [settings]="settings"
+        [data]="ticketsData || []"
+        [isLoading]="loading"
+      >
+      </app-table>
+    </div>
+  </div>
+</div>

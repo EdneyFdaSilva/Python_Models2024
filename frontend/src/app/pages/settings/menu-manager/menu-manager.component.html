@@ -1,0 +1,141 @@
+<div
+  class="container-fluid theme-background"
+  style="overflow-y: hidden !important;"
+>
+  <div class="theme-background theme-textTertiary">
+    <h3>Menu Manager</h3>
+  </div>
+
+  <div class="row mt-4">
+    <!--MENU LIST-->
+    <div class="col-md-6">
+      <div class="menu-list theme-textTertiary" *ngIf="!loading">
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            [ngClass]="
+              menu.menuId ? 'list-group-item' : 'list-group-item parent'
+            "
+            *ngFor="let menu of menuList"
+            (click)="editMenu(menu)"
+          >
+            {{ menu.id }} - {{ menu.name }}
+          </li>
+        </ul>
+      </div>
+      <app-loading [show]="loading"></app-loading>
+    </div>
+    <!--MENU LIST-->
+
+    <!--MENU FORM-->
+    <div class="col-md-6">
+      <div class="card theme-paper">
+        <h3 class="m-4 theme-textTertiary">
+          {{ editMode ? 'Edit Menu' : 'Create Menu' }}
+        </h3>
+        <form [formGroup]="menuForm" (ngSubmit)="save()" class="p-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control required"
+                  formControlName="name"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="iconClass">Icon Class</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="iconClass"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="route">Route</label>
+                <input
+                  type="text"
+                  class="form-control required"
+                  formControlName="route"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="menuId">Parent ID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="menuId"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="orderMenu">Order</label>
+                <input
+                  type="text"
+                  class="form-control required"
+                  formControlName="orderMenu"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="module">Module</label>
+                <input
+                  type="text"
+                  class="form-control required"
+                  formControlName="module"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="pageName">Page Name</label>
+                <input
+                  type="text"
+                  class="form-control required"
+                  formControlName="pageName"
+                />
+              </div>
+            </div>
+            <div class="col-md-4" *ngIf="editMode">
+              <button
+                (click)="clear()"
+                class="btn btn-warning btn-block text-white p-2 my-2 shadow-sm"
+                [disabled]="loading"
+              >
+                Clear
+              </button>
+            </div>
+            <div class="col-md-4" *ngIf="editMode">
+              <button
+                (click)="delete()"
+                class="btn btn-danger btn-block text-white p-2 my-2 shadow-sm"
+                [disabled]="loading"
+              >
+                Delete
+              </button>
+            </div>
+            <div [ngClass]="editMode ? 'col-md-4' : 'col-12'">
+              <button
+                type="submit"
+                class="btn btn-primary btn-block text-white p-2 my-2 shadow-sm"
+                [disabled]="loading"
+              >
+                {{ loading ? 'Saving...' : 'Save' }}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--MENU FORM-->
+  </div>
+</div>

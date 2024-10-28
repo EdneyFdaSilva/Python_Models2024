@@ -1,0 +1,17 @@
+<div class="container-fluid p-3" style="overflow-y: hidden !important;">
+  <div class="mb-3">
+    <div class="row p-3">
+      <h2 class="text-dark">IRIS Agile Schedule</h2>
+    </div>
+    <app-schedule-agile-filters
+      (filterChange)="onFilterChange($event)"
+      (clearFiltersEvent)="onClearFiltersChange($event)"
+    ></app-schedule-agile-filters>
+  </div>
+
+  <div class="container-charts-align mb-5">
+    <div class="col-sm-13 col-md-13 col-lg-13 col-xl-13">
+      <app-schedule-agile-table [updateEvent]="updateChart"></app-schedule-agile-table>
+    </div>
+  </div>
+</div>

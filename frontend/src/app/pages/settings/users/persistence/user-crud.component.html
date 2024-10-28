@@ -1,0 +1,335 @@
+<div class="container-fluid">
+  <div class="row header-row crud theme-paper">
+    <div class="col p-4 ml-5">
+      <i
+        class="fa fa-chevron-left pr-5 pl-2 theme-textTertiary"
+        [routerLink]="['/settings/users']"
+      ></i>
+      <span class="title theme-textTertiary">User</span>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-md-10" *ngIf="!loading">
+      <form
+        [formGroup]="userForm"
+        class="theme-paper"
+        (ngSubmit)="upInsert()"
+        style="padding: 30px;"
+        autocomplete="off"
+      >
+        <div class="row">
+          <span id="error"></span>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <p class="lead theme-textTertiary">Account Settings</p>
+              </div>
+            </div>
+
+            <div class="panel-body">
+              <div class="row">
+                <input type="hidden" formControlName="id" />
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="userRealName">Name</label>
+                    <input
+                      type="text"
+                      class="form-control required"
+                      autocomplete="off"
+                      formControlName="userRealName"
+                      maxlength="50"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input
+                      type="password"
+                      class="form-control required"
+                      autocomplete="off"
+                      formControlName="password"
+                      maxlength="255"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="passwordConfirm">Repeat Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      autocomplete="off"
+                      formControlName="passwordConfirm"
+                      maxlength="255"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="form-control"
+                      autocomplete="off"
+                      formControlName="email"
+                      maxlength="76"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-6 ">
+                  <label for="enableaccount">Enable Account</label>
+                  <mat-slide-toggle
+                    name="enableaccount"
+                    id="enableaccount"
+                    autocomplete="off"
+                    class="crud-checkbox"
+                    formControlName="enableaccount"
+                  >
+                  </mat-slide-toggle>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input
+                      type="text"
+                      class="form-control required"
+                      mask="(00) 00000-0000"
+                      autocomplete="off"
+                      formControlName="phone"
+                      maxlength="50"
+                    />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <label for="functionSelector">Function</label>
+                  <select
+                    type="select"
+                    class="form-control required"
+                    formControlName="functionSelector"
+                    (change)="functionChanged()"
+                  >
+                    <option [ngValue]="" disabled>Select a function</option>
+                    <option *ngFor="let role of roles" [ngValue]="role.name">
+                      {{ role.name }}
+                    </option>
+                  </select>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="function">Other</label>
+                    <input
+                      type="text"
+                      class="form-control required"
+                      autocomplete="off"
+                      formControlName="function"
+                      maxlength="50"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-3">
+                  <label for="countrySelector">Country</label>
+                  <select
+                    type="select"
+                    class="form-control required"
+                    formControlName="countrySelector"
+                    (change)="countryChanged()"
+                  >
+                    <option [ngValue]="" disabled>Select a country</option>
+                    <option
+                      *ngFor="let country of countries"
+                      [ngValue]="country.name"
+                    >
+                      {{ country.name }}
+                    </option>
+                  </select>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="country">Other</label>
+                    <input
+                      type="text"
+                      class="form-control required"
+                      autocomplete="off"
+                      formControlName="country"
+                      maxlength="50"
+                    />
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="company">Company</label>
+                    <select
+                      type="select"
+                      class="form-control required"
+                      formControlName="company"
+                    >
+                      <option [ngValue]="" disabled>Select a company</option>
+                      <option
+                        *ngFor="let company of companies"
+                        [ngValue]="company.name"
+                      >
+                        {{ company.name }}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="areaSelector">Area</label>
+                    <select
+                      type="select"
+                      class="form-control required"
+                      formControlName="areaSelector"
+                      (change)="areaChanged()"
+                    >
+                      <option [ngValue]="" disabled>Select an area</option>
+                      <option *ngFor="let area of areas" [ngValue]="area.name">
+                        {{ area.name }}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="area">Other</label>
+                    <input
+                      type="text"
+                      class="form-control required"
+                      autocomplete="off"
+                      formControlName="area"
+                      maxlength="50"
+                    />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="managerSelector">Manager Name</label>
+                    <select
+                      type="select"
+                      class="form-control required"
+                      formControlName="managerSelector"
+                      (change)="setManagerEmail()"
+                    >
+                      <option [ngValue]="" disabled>Select a manager</option>
+                      <option
+                        *ngFor="let manager of managers"
+                        [ngValue]="manager.name"
+                      >
+                        {{ manager.name }}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-group">
+                    <label for="managerName">Other</label>
+                    <input
+                      type="text"
+                      class="form-control required"
+                      autocomplete="off"
+                      formControlName="managerName"
+                      maxlength="50"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="phone">Manager E-mail</label>
+                    <input
+                      type="text"
+                      class="form-control required"
+                      autocomplete="off"
+                      formControlName="managerEmail"
+                      maxlength="50"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <p class="lead theme-textTertiary">
+                  Permission Group
+                </p>
+              </div>
+              <div class="panel-body">
+                <div class="controls theme-textTertiary">
+                  <strong>Check:</strong>
+                  <a (click)="checkAll()" class="fake-link mx-1">All</a>
+                  |
+                  <a (click)="uncheckAll()" class="fake-link mx-1">None</a>
+                </div>
+
+                <div
+                  *ngFor="let group of groupControls; let i = index"
+                  class="custom-control custom-checkbox mt-2"
+                >
+                  <input
+                    (change)="
+                      getSelectedGroups(group, listPermissionGroups[i].name)
+                    "
+                    [formControl]="group"
+                    [id]="'group_' + i"
+                    class="custom-control-input"
+                    type="checkbox"
+                  />
+                  <label
+                    class="custom-control-label fake-link"
+                    [for]="'group_' + i"
+                  >
+                    {{ listPermissionGroups[i].name }}
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row buttons-row">
+          <div class="col-md-10"></div>
+          <div class="col-md-2">
+            <button
+              type="submit"
+              class="btn btn-primary btn-block text-white p-2 my-2 shadow-sm"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <app-loading [show]="loading" [size]="'5x'"></app-loading>
+</div>

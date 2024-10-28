@@ -1,0 +1,536 @@
+{
+  "Companies": [
+    {
+      "id": "hp",
+      "name": "HP"
+    },
+    {
+      "id": "flex",
+      "name": "Flex"
+    },
+    {
+      "id": "fit",
+      "name": "FIT"
+    },
+    {
+      "id": "sinctronics",
+      "name": "Sinctronics"
+    },
+    {
+      "id": "sincpress",
+      "name": "Sincpress"
+    },
+    {
+      "id": "sonoco",
+      "name": "Sonoco"
+    },
+    {
+      "id": "dhl",
+      "name": "DHL"
+    },
+    {
+      "id": "tsystems",
+      "name": "T-Systems"
+    }
+  ],
+  "Roles": [
+    {
+      "id": "engineer",
+      "name": "Engineer"
+    },
+    {
+      "id": "businessOpsAnalystManager",
+      "name": "Business Ops Analyst/Mgr"
+    },
+    {
+      "id": "developerAnalystDataScience",
+      "name": "Developer / Analyst / Data Science"
+    },
+    {
+      "id": "businessPlannerPM",
+      "name": "Business Planner / PM"
+    },
+    {
+      "id": "technician",
+      "name": "Technician"
+    },
+    {
+      "id": "supply-factoryPlanner",
+      "name": "Supply/Factory Planner"
+    },
+    {
+      "id": "demandPlanner",
+      "name": "Demand Planner"
+    },
+    {
+      "id": "materialsPlannerBuyer",
+      "name": "Materials Planner/Buyer"
+    },
+    {
+      "id": "procurementEngineer",
+      "name": "Procurement Engineer"
+    },
+    {
+      "id": "commodityManager",
+      "name": "Commodity Manager"
+    },
+    {
+      "id": "partnerManager",
+      "name": "Partner Manager"
+    },
+    {
+      "id": "procurementAnalyst",
+      "name": "Procurement Analyst"
+    },
+    {
+      "id": "strategicBusinessPlanner",
+      "name": "Strategic Business Planner"
+    },
+    {
+      "id": "manager",
+      "name": "Manager"
+    },
+    {
+      "id": "programManager",
+      "name": "Program Manager / Project Manager"
+    },
+    {
+      "id": "director",
+      "name": "Director"
+    },
+    {
+      "id": "brand-and-supplyChainSecurity",
+      "name": "Brand & Supply Chain Security"
+    },
+    {
+      "id": "com",
+      "name": "COM - Country Ops Mgr"
+    },
+    {
+      "id": "gam",
+      "name": "GAM - Global Account Mgr"
+    },
+    {
+      "id": "generalManager",
+      "name": "General Manager"
+    },
+    {
+      "id": "vicePresident",
+      "name": "Vice President"
+    },
+    {
+      "id": "productionSupervisor",
+      "name": "Production Supervisor/Lead"
+    },
+    {
+      "id": "other",
+      "name": "Other (please specify)"
+    }
+  ],
+  "Areas" : [
+    {
+      "id": "printingMfgOps",
+      "name": "Printing Mfg Ops"
+    },
+    {
+      "id": "personalSystemsMfgOps",
+      "name": "Personal Systems Mfg Ops"
+    },
+    {
+      "id": "procurement-and-partnerManagement",
+      "name": "Procurement & Partner Management"
+    },
+    {
+      "id": "factoryPlanning",
+      "name": "Factory Planning"
+    },
+    {
+      "id": "factoryOps",
+      "name": "Factory Ops"
+    },
+    {
+      "id": "panamaOps",
+      "name": "Panama Ops"
+    },
+    {
+      "id": "closed-loopOps",
+      "name": "Closed-loop Ops"
+    },
+    {
+      "id": "latamManufacturingOps",
+      "name": "LATAM Manufacturing Ops"
+    },
+    {
+      "id": "latamSupplyChainOps",
+      "name": "LATAM Supply Chain Ops"
+    },
+    {
+      "id": "latamCustomerOps",
+      "name": "LATAM Customer Ops"
+    },
+    {
+      "id": "latamDemandFulfillment",
+      "name": "LATAM Demand Fulfillment"
+    },
+    {
+      "id": "latamLogistics",
+      "name": "LATAM Logistics"
+    },
+    {
+      "id": "printingGBUOperations",
+      "name": "Printing GBU Operations"
+    },
+    {
+      "id": "psGBUOperations",
+      "name": "PS GBU Operations"
+    },
+    {
+      "id": "wwPackaging",
+      "name": "WW Packaging"
+    },
+    {
+      "id": "brand-and-supplyChainSecurity",
+      "name": "Brand & Supply Chain Security"
+    },
+    {
+      "id": "dpaOps",
+      "name": "DPA / OPS"
+    },
+    {
+      "id": "crews-facilities",
+      "name": "CREWS / Facilities"
+    },
+    {
+      "id": "humanResources",
+      "name": "Human Resources"
+    },
+    {
+      "id": "finance",
+      "name": "Finance"
+    },
+    {
+      "id": "it",
+      "name": "IT"
+    },
+    {
+      "id": "r-and-d",
+      "name": "R&D"
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering"
+    },
+    {
+      "id": "production-manufacturing",
+      "name": "Production / Manufacturing"
+    },
+    {
+      "id": "business-and-operations",
+      "name": "Business & Operations"
+    },
+    {
+      "id": "quality",
+      "name": "Quality"
+    },
+    {
+      "id": "latamStrategyAndBusinessPlanning",
+      "name": "LATAM Strategy & Business Planning"
+    },
+    {
+      "id": "latamSupplyChainResillience",
+      "name": "LATAM Supply Chain Resillience"
+    },
+    {
+      "id": "materialsPlanning",
+      "name": "Materials Planning"
+    },
+    {
+      "id": "other",
+      "name": "Other (please specify)"
+    }
+  ],
+  "Countries": [
+    {
+      "id": "bra",
+      "name": "Brazil"
+    },
+    {
+      "id": "arg",
+      "name": "Argentina"
+    },
+    {
+      "id": "col",
+      "name": "Colombia"
+    },
+    {
+      "id": "per",
+      "name": "Peru"
+    },
+    {
+      "id": "ven",
+      "name": "Venezuela"
+    },
+    {
+      "id": "chl",
+      "name": "Chile"
+    },
+    {
+      "id": "pan",
+      "name": "Panama"
+    },
+    {
+      "id": "mex",
+      "name": "Mexico"
+    },
+    {
+      "id": "usa",
+      "name": "USA"
+    },
+    {
+      "id": "pri",
+      "name": "Puerto Rico"
+    },
+    {
+      "id": "chn",
+      "name": "China"
+    },
+    {
+      "id": "nld",
+      "name": "Netherlands"
+    },
+    {
+      "id": "esp",
+      "name": "Spain"
+    },
+    {
+      "id": "fra",
+      "name": "France"
+    },
+    {
+      "id": "cze",
+      "name": "Czech Republic"
+    },
+    {
+      "id": "deu",
+      "name": "Germany"
+    },
+    {
+      "id": "cri",
+      "name": "Costa Rica"
+    },
+    {
+      "id": "ind",
+      "name": "India"
+    },
+    {
+      "id": "isr",
+      "name": "Israel"
+    },
+    {
+      "id": "other",
+      "name": "Other (please specify)"
+    }
+  ],
+  "Managers": [
+    {
+      "name": "Alex Souza",
+      "email": "alexandre.souza@hp.com"
+    },
+    {
+      "name": "Ana Rueda",
+      "email": "ana-maria.rueda@hp.com"
+    },
+    {
+      "name": "Antoine Colin",
+      "email": "antoine.colin@hp.com"
+    },
+    {
+      "name": "Antoine Simonnet",
+      "email": "antoine.simonnet@hp.com"
+    },
+    {
+      "name": "Milton Froiman",
+      "email": "milton.froiman@hp.com"
+    },
+    {
+      "name": "Vanessa Santos",
+      "email": "vsantos@hp.com"
+    },
+    {
+      "name": "Celso Santos",
+      "email": "celso.santos@hp.com"
+    },
+    {
+      "name": "Rodrigo Rossi",
+      "email": "rrossi@hp.com"
+    },
+    {
+      "name": "Mauro Alves",
+      "email": "mauro.alves@hp.com"
+    },
+    {
+      "name": "Kami Saidi",
+      "email": "kami.saidi@hp.com"
+    },
+    {
+      "name": "Marcelo Pandini",
+      "email": "marcelo.pandini@hp.com"
+    },
+    {
+      "name": "Reinaldo Villar",
+      "email": "reinaldo.villar@hp.com"
+    },
+    {
+      "name": "Eduardo Orozco",
+      "email": "eduardo.orozco@hp.com"
+    },
+    {
+      "name": "Fernando Macias",
+      "email": "fernando.macias@hp.com"
+    },
+    {
+      "name": "Rafael Franco",
+      "email": "franco@hp.com"
+    },
+    {
+      "name": "Cassio Lopes",
+      "email": "cassio.lopes@hp.com"
+    },
+    {
+      "name": "Ernesto Kirsch",
+      "email": "ernesto.kirsch@hp.com"
+    },
+    {
+      "name": "Lisa McPherson",
+      "email": "lisa.mcpherson@hp.com"
+    },
+    {
+      "name": "Jessica Kipp",
+      "email": "jessica.l.hoffman@hp.com"
+    },
+    {
+      "name": "Enrique Rodriguez",
+      "email": "enrique.rodriguez1@hp.com"
+    },
+    {
+      "name": "Pablo Nava",
+      "email": "pablo.nava@hp.com"
+    },
+    {
+      "name": "Mark Bakker",
+      "email": "mark.bakker@hp.com"
+    },
+    {
+      "name": "Leandro Santos",
+      "email": "leandro.santos@flex.com"
+    },
+    {
+      "name": "Doglacir Sandrin",
+      "email": "doglacir.sandrin@flex.com"
+    },
+    {
+      "name": "Wilians Azevedo",
+      "email": "wilians.azevedo@flextronics.com"
+    },
+    {
+      "name": "Rogerio Veiga",
+      "email": "rogerio.veiga@flex.com"
+    },
+    {
+      "name": "Cristiano Monteiro",
+      "email": "cristiano.monteiro@flex.com"
+    },
+    {
+      "name": "Ricardo Rodrigues",
+      "email": "ricardo.rodrigues@flex.com"
+    },
+    {
+      "name": "Eudis Santos",
+      "email": "eudis.santos@flex.com"
+    },
+    {
+      "name": "Fernando Farias",
+      "email": "fernando.farias@flex.com"
+    },
+    {
+      "name": "Wande Chagas",
+      "email": "wandecleson.chagas@flex.com"
+    },
+    {
+      "name": "Carlos Mangano",
+      "email": "carlos.mangano@flex.com"
+    },
+    {
+      "name": "Rubens Kogake",
+      "email": "rubens.kogake@flex.com"
+    },
+    {
+      "name": "Hilton Yokota",
+      "email": "hilton.yokota@flex.com"
+    },
+    {
+      "name": "Luiz Ribeiro",
+      "email": "luiz.ribeiro@flex.com"
+    },
+    {
+      "name": "Julio Schwartzman",
+      "email": "julio.schwartzman@flex.com"
+    },
+    {
+      "name": "Edinilson Belinassi",
+      "email": "edinilson.bellinassi@flextronics.com"
+    },
+    {
+      "name": "Ricardo Carnelós",
+      "email": "ricardo.carnelos@flex.com"
+    },
+    {
+      "name": "Marcos Barreta",
+      "email": "marcos.barreto@hp.com"
+    },
+    {
+      "name": "Atilio Silva",
+      "email": "atilio.silva@flex.com"
+    },
+    {
+      "name": "Fernanda Canton",
+      "email": "fernanda.canton@flex.com"
+    },
+    {
+      "name": "Regiane Silveira",
+      "email": "regiane.silveira@flex.com"
+    },
+    {
+      "name": "Carlos Ohde",
+      "email": "carlos.ohde@flex.com"
+    },
+    {
+      "name": "Marcelo Arruda",
+      "email": "marcelo.arruda@fit-tecnologia.org.br"
+    },
+    {
+      "name": "Marcelo Marconimi",
+      "email": "marcelo.marcomini@fit-tecnologia.org.br"
+    },
+    {
+      "name": "Marcelo Braz",
+      "email": "marcelo.braz@hp.com"
+    },
+    {
+      "name": "Domingos Palacio",
+      "email": "domingos.palacio@t-systems.com"
+    },
+    {
+      "name": "André Silveira",
+      "email": "andre.silveira@flex.com"
+    },
+    {
+      "name": "Paula Valério",
+      "email": "paula.valerio@fit-tecnologia.org.br"
+    },
+    {
+      "name": "Other (please specify)",
+      "email": ""
+    }
+  ]
+}

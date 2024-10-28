@@ -1,0 +1,43 @@
+.bg-image {
+  background-image: url(/assets/images/background-home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.sub-title {
+  color: #0096d6;
+  display: inline-block;
+}
+
+@media (min-height: 568px) {
+  .logo-icon {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media (min-height: 667px) {
+  .logo-icon {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+@media (min-width: 576px) {
+  .logo-icon {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+@media (min-height: 1366px) {
+  .logo-icon {
+    height: 300px;
+    width: 300px;
+  }
+}

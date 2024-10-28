@@ -1,0 +1,156 @@
+<div class="container-fluid">
+  <div class="row header-row crud theme-paper">
+    <div class="col p-4 ml-5">
+      <i
+        class="fa fa-chevron-left pr-5 pl-2 theme-textTertiary"
+        [routerLink]="['/settings/permission-groups']"
+      ></i>
+      <span class="title theme-textTertiary">Permission Groups List</span>
+    </div>
+  </div>
+
+  <div class="main-content mt-5">
+    <div class="container">
+      <form
+        [formGroup]="permissionForm"
+        class="theme-paper"
+        (ngSubmit)="upInsert()"
+        style="padding: 30px;"
+      >
+        <div class="row">
+          <span id="error"></span>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <p class="lead theme-textTertiary">Permission Groups</p>
+              </div>
+            </div>
+
+            <div class="panel-body">
+              <div class="row">
+                <input type="hidden" formControlName="id" />
+                <div class="col-md-6">
+                  <div
+                    class="form-group"
+                    [class.invalid]="
+                      name.errors && (name.dirty || name.touched)
+                    "
+                  >
+                    <label for="name">Name</label>
+                    <span
+                      *ngIf="
+                        name.errors?.required && (name.dirty || name.touched)
+                      "
+                    >
+                      is required.</span
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      autocomplete="off"
+                      formControlName="name"
+                      maxlength="50"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row ml-1">
+                <div id="users" class="checkbox" style="padding-top: 15px;">
+                  <div *ngFor="let group of getControls(); let i = index">
+                    <mat-checkbox [formControl]="group"
+                      >{{ listUsers[i].userRealName }} -
+                      {{ listUsers[i].username }}</mat-checkbox
+                    >
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <p class="lead theme-textTertiary">
+                  Menus
+                </p>
+              </div>
+              <div class="panel-body">
+                <div class="controls">
+                  <div style="padding-top: 15px;">
+                    <label>
+                      <strong>Check:</strong>
+                      <a (click)="checkAll()" style="cursor: pointer"> All</a>
+                      |
+                      <a (click)="uncheckAll()" style="cursor: pointer">None</a>
+                    </label>
+                  </div>
+                </div>
+
+                <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                  <mat-tree-node
+                    *matTreeNodeDef="let node"
+                    matTreeNodeToggle
+                    matTreeNodePadding
+                  >
+                    <button type="button" mat-icon-button disabled></button>
+                    <mat-checkbox
+                      class="checklist-leaf-node"
+                      [checked]="checklistSelection.isSelected(node)"
+                      (change)="menuLeafItemSelectionToggle(node)"
+                      >{{ node.name }}</mat-checkbox
+                    >
+                  </mat-tree-node>
+
+                  <mat-tree-node
+                    *matTreeNodeDef="let node; when: hasChild"
+                    matTreeNodePadding
+                  >
+                    <button
+                      type="button"
+                      mat-icon-button
+                      matTreeNodeToggle
+                      [attr.aria-label]="'toggle ' + node.filename"
+                    >
+                      <mat-icon class="mat-icon-rtl-mirror">
+                        {{
+                          treeControl.isExpanded(node)
+                            ? 'expand_more'
+                            : 'chevron_right'
+                        }}
+                      </mat-icon>
+                    </button>
+                    <mat-checkbox
+                      [checked]="descendantsAllSelected(node)"
+                      [indeterminate]="descendantsPartiallySelected(node)"
+                      (change)="menuItemSelectionToggle(node)"
+                      >{{ node.name }}</mat-checkbox
+                    >
+                  </mat-tree-node>
+                </mat-tree>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row buttons-row">
+          <div class="col-md-10"></div>
+          <div class="col-md-2">
+            <button
+              [disabled]="!permissionForm.valid"
+              type="submit"
+              class="btn btn-primary btn-block text-white p-2 my-2 shadow-sm"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <app-loading [show]="loading" [size]="'5x'"></app-loading>
+    </div>
+  </div>
+</div>

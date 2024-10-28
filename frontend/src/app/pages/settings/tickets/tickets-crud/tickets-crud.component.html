@@ -1,0 +1,424 @@
+<div class="container-fluid theme-background">
+  <div class="row header-row crud theme-paper theme-textTertiary">
+    <div class="col p-4 ml-5">
+      <i
+        class="fa fa-chevron-left pr-5 pl-2"
+        [routerLink]="['/settings/tickets']"
+      ></i>
+      <span class="title theme-textTertiary">Ticket</span>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-md-6 " *ngIf="!loading">
+      <ul class="nav nav-tabs theme-textTertiary" *ngIf="id > 0">
+        <li class="nav-item ">
+          <a
+            class="nav-link"
+            [ngClass]="history ? '' : 'active'"
+            (click)="history = false"
+            >Details</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [ngClass]="history ? 'active' : ''"
+            (click)="history = true"
+            >History</a
+          >
+        </li>
+      </ul>
+
+      <form
+        [formGroup]="ticketForm"
+        class="theme-paper p-4 theme-textTertiary"
+        (ngSubmit)="save()"
+        autocomplete="off"
+        *ngIf="!history"
+      >
+        <div class="edit" *ngIf="id > 0">
+          <p>
+            <span>Request Date:</span>
+            {{ ticket?.openDate | date: 'dd-MMMM-yyyy' }}
+          </p>
+          <i
+            class="fa fa-edit p-2"
+            (click)="setEditMode()"
+            *ngIf="
+              userData?.roles?.includes('Admin') ||
+              ticket?.userRequestEmail === userData?.email
+            "
+          ></i>
+        </div>
+        <div class="row">
+          <span id="error"></span>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="title">Subject</label>
+              <input
+                type="text"
+                class="form-control required"
+                formControlName="title"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="type">Type</label>
+              <app-select-field
+                (change)="handleTypeChange()"
+                [control]="ticketForm.controls.ticketType"
+                [field]="ticketTypeDropDown"
+                class="mx-2"
+              >
+              </app-select-field>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="priority">Priority</label>
+              <app-select-field
+                [control]="ticketForm.controls.priority"
+                [field]="ticketPriorityDropDown"
+                class="mx-2"
+              >
+              </app-select-field>
+            </div>
+          </div>
+        </div>
+        <div class="row" *ngIf="ticketForm.controls.ticketType.value != 3">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="menuModuleId">Module</label>
+              <app-select-field
+                (change)="handleModuleDropDown($event)"
+                [control]="ticketForm.controls.menuModuleId"
+                [field]="ticketModuleDropDown"
+                class="mx-2"
+              >
+              </app-select-field>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row"
+          *ngIf="screenIsVisible && ticketForm.controls.ticketType.value != 3"
+        >
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="menuScreenId">Screen</label>
+              <app-select-field
+                (change)="handleScreenDropDown($event)"
+                [control]="ticketForm.controls.menuScreenId"
+                [field]="ticketScreenDropDown"
+                class="mx-2"
+              >
+              </app-select-field>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row"
+          *ngIf="
+            operationIsVisible && ticketForm.controls.ticketType.value != 3
+          "
+        >
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="menuOperationId">Operation</label>
+              <app-select-field
+                [control]="ticketForm.controls.menuOperationId"
+                [field]="ticketOperationDropDown"
+                class="mx-2"
+              >
+              </app-select-field>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="ticketType != 3">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                  type="text"
+                  rows="5"
+                  class="form-control theme-textTertiary"
+                  formControlName="description"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="ticketType == 3">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="objectives">Objectives</label>
+                <textarea
+                  type="text"
+                  rows="5"
+                  placeholder="List up to 3 objectives"
+                  class="form-control theme-textTertiary"
+                  formControlName="objectives"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="expected_benefits">Expected Benefits</label>
+                <textarea
+                  type="text"
+                  rows="5"
+                  placeholder="List up to 3 key business purposes"
+                  class="form-control theme-textTertiary"
+                  formControlName="expectedBenefits"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="overall_description">Overall Description</label>
+                <textarea
+                  type="text"
+                  rows="5"
+                  class="form-control theme-textTertiary"
+                  formControlName="description"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="inputs">Inputs</label>
+                <textarea
+                  type="text"
+                  rows="5"
+                  placeholder="List which are the inputs for the process/report to be developed/automated, such as databases, systems, spreadsheets, etc"
+                  class="form-control theme-textTertiary"
+                  formControlName="inputs"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="process">Process</label>
+                <textarea
+                  type="text"
+                  rows="5"
+                  placeholder="Explain the process/calculation/algorithm"
+                  class="form-control theme-textTertiary"
+                  formControlName="process"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="outputs">Outputs</label>
+                <textarea
+                  type="text"
+                  rows="5"
+                  placeholder="Describe/detail the expected output, such as report content/format/graphics/flows"
+                  class="form-control theme-textTertiary"
+                  formControlName="outputs"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="form" [formGroup]="form">
+              <label for="email">Email Cc</label>
+              <mat-form-field
+                class="col-12"
+                style="padding-left: 0px;padding-right: 0px;padding-top: 0px;"
+              >
+                <mat-chip-list #chipList aria-label="Email selection">
+                  <mat-chip
+                    *ngFor="let email of emails"
+                    [selectable]="selectable"
+                    [removable]="removable"
+                    (removed)="remove(email)"
+                  >
+                    {{ email.emailcopy }}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <style>
+                    input[type='email'] {
+                      width: 100%;
+                      padding: 12px 20px;
+                      margin: 8px 0;
+                      box-sizing: border-box;
+                      border: none;
+                      border-bottom: 1px solid rgb(209, 204, 204);
+                    }
+                  </style>
+                  <input
+                    matInput
+                    type="email"
+                    size="500"
+                    [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)"
+                    formControlName="email"
+                  />
+                </mat-chip-list>
+              </mat-form-field>
+              <mat-error *ngIf="!email.valid">
+                {{ getEmailError() }}
+              </mat-error>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="id > 0">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="priority">Status</label>
+                <app-select-field
+                  [control]="ticketForm.controls.status"
+                  [field]="ticketStatusDropDown"
+                  class="mx-2"
+                >
+                </app-select-field>
+              </div>
+            </div>
+            <div class="col-md-6" *ngIf="id > 0 && resolved">
+              <div class="form-group">
+                <label for="priority">Resolution</label>
+                <app-select-field
+                  [control]="ticketForm.controls.resolution"
+                  [field]="ticketResolutionDropDown"
+                  class="mx-2"
+                >
+                </app-select-field>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="affected_version">Affected Version</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="bugVersion"
+                />
+              </div>
+            </div>
+            <div class="col-md-6" *ngIf="id > 0 && resolved">
+              <div class="form-group">
+                <label for="release_version">Release Version</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="releaseVersion"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="id > 0 && resolved">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="information">Resolution Description</label>
+              <textarea
+                type="text"
+                class="form-control theme-textTertiary"
+                formControlName="informationUpdate"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <label>Attachments</label><br />
+        <div class="row">
+          <div
+            class="col-12"
+            *ngIf="editMode || (editMode && ticketForm?.value?.status === 1)"
+          >
+            <div class="form-group">
+              <input
+                id="attachments"
+                type="file"
+                accept=""
+                (change)="fileProgress($event)"
+                ng-file-model="fileData"
+                class="hidden"
+                formControlName="ticketAttachments"
+                multiple
+              />
+              <label for="attachments" class="btn btn-primary fake-link">
+                Choose files </label
+              ><br />
+            </div>
+          </div>
+        </div>
+
+        <div class="row file-list">
+          <div class="col-12" *ngFor="let file of fileData; let i = index">
+            <p>{{ file.name ? file.name : file.fileName }}</p>
+            <div class="file-icons">
+              <i
+                class="fas fa-download"
+                *ngIf="id > 0 && !editMode"
+                (click)="downloadFile(i)"
+              ></i>
+              <i
+                class="fas fa-times"
+                (click)="removeFile(i)"
+                *ngIf="editMode"
+              ></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="editMode">
+          <div class="col-12">
+            <button
+              type="submit"
+              class="btn btn-primary btn-block text-white p-2 my-2 shadow-sm"
+              [disabled]="loading"
+            >
+              {{ loading ? 'Saving...' : 'Save' }}
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div *ngIf="history" class="theme-paper theme-textTertiary p-4">
+        <h3 class="title mb-4">History</h3>
+
+        <div
+          class="history-item mt-2 mb-4 theme-textTertiary"
+          *ngFor="let item of ticket.ticketHistories.slice()"
+        >
+          <p>
+            <span>Update date:</span>
+            {{ item.date | date: 'dd-MMMM-yyyy HH:mm' }}
+          </p>
+          <p><span>Updated by:</span> {{ item.userUpdateName }}</p>
+          <p><span>Updates:</span></p>
+          <p [innerHtml]="item.historyText"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

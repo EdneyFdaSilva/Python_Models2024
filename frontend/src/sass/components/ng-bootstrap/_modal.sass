@@ -1,0 +1,20 @@
+@import 'variables/colors'
+
+ngb-modal-window
+  &.modal
+    .modal-dialog
+      max-height: 90vh
+      overflow-y: none
+
+    .card-header
+      background-color: map-get($grays, '600')
+
+      .close
+        &:focus
+          outline: 0
+
+    .card-footer
+      border-top: solid .11rem $black
+
+  .modal-xxl
+    max-width: 90vw

@@ -1,0 +1,61 @@
+.edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  p {
+    margin: 0;
+  }
+}
+
+i {
+  cursor: pointer;
+}
+
+.nav-tabs .nav-link {
+  cursor: pointer !important;
+}
+
+p {
+  span {
+    font-weight: bold;
+  }
+}
+
+.history-item {
+  border-bottom: 1px solid white;
+}
+
+textarea {
+  background-color: #ffffff;
+  &::placeholder {
+    color: #666;
+  }
+}
+
+.file-list {
+  margin-bottom: 20px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 80%;
+      margin: 0;
+    }
+
+    .file-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .file-icons > :first-child {
+      margin-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 120,
+  "tabWidth": 2,
+  "semi": true,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "angular"
+      }
+    },
+    {
+      "files": "*.component.ts",
+      "options": {
+        "parser": "typescript",
+        "trailingComma": "none"
+      }
+    }
+  ]
+}

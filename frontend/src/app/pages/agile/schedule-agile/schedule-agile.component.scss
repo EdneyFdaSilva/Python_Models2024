@@ -1,0 +1,15 @@
+.container-charts-align {
+  margin-top: 20px;
+  padding-left: 2px;
+  z-index: 0;
+}
+
+@font-face {
+  font-family: 'Forma DJR Micro';
+  src: local('Forma DJR Micro'),
+    url(..//..//..//..//sass/webfonts/formaDJRMicro/FormaDJRMicro-Regular.otf) format('opentype');
+}
+
+::ng-deep svg.highcharts-root {
+  font-family: 'Forma DJR Micro' !important;
+}

@@ -1,0 +1,23 @@
+<div class="container-fluid p-3" style="overflow-y: hidden !important;">
+  <div class="row mt-1 p-3">
+    <h2 class="text-dark">IRIS Sprints Planning</h2>
+  </div>
+
+  <div *ngFor="let sprint of sprintList">
+    <div class="d-flex">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+        <h2 class="text-dark">{{ sprint.name }}</h2>
+        <div class="theme-paper">
+          <app-table
+            #table
+            id="detailTable"
+            [columns]="columns"
+            [settings]="settings"
+            [data]="sprint.tableData || []"
+            [isLoading]="isLoading"
+          ></app-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

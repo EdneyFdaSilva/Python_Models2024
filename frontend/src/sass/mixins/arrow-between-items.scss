@@ -1,0 +1,13 @@
+@import 'variables/colors';
+
+@mixin arrow-between-items {
+  &:not(:first-child):before {
+    color: map-get($grays, 'dove-gray');
+    content: '\4c';
+    font-family: 'HPIcons';
+    left: -5%;
+    position: absolute;
+    top: 25%;
+    font-size: 1.5rem;
+  }
+}

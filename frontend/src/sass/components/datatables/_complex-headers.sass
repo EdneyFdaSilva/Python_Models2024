@@ -1,0 +1,22 @@
+@import 'variables/colors'
+
+.DTFC_LeftWrapper
+
+  .DTFC_LeftBodyWrapper
+    border-right: 0px solid $white
+
+  table.dataTable
+    border-bottom-width: 0
+
+    tr
+      th, td
+        background-color: map-get($grays, '700')
+        border-bottom-width: 0
+        border-bottom-color: red
+
+      th.totalizer, td.totalizer
+        background-color: map-get($grays, '600')
+
+.dataTables_scrollBody
+  table.dataTable
+    margin: 0

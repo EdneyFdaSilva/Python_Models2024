@@ -1,0 +1,87 @@
+<div
+  class="container-fluid theme-background"
+  style="overflow-y: hidden !important;"
+>
+  <div class="theme-background theme-textTertiary">
+    <h3>Versioning Manager</h3>
+  </div>
+
+  <div class="row mt-4">
+    <!--VERSIONING LIST-->
+    <div class="col-md-6">
+      <div class="menu-list theme-textTertiary" *ngIf="!loading">
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let version of versions"
+            (click)="editVersion(version)"
+          >
+            {{ version.version }}
+          </li>
+        </ul>
+      </div>
+      <app-loading [show]="loading"></app-loading>
+    </div>
+    <!--VERSIONING LIST-->
+
+    <!--VERSIONING FORM-->
+    <div class="col-md-6">
+      <div class="card theme-paper">
+        <h3 class="m-4 theme-textTertiary">
+          {{ editMode ? 'Edit Version' : 'Add Version' }}
+        </h3>
+        <form [formGroup]="versioningForm" (ngSubmit)="save()" class="p-4">
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="version">Version</label>
+                <input
+                  type="text"
+                  class="form-control required"
+                  formControlName="version"
+                />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <app-date-field
+                  [control]="versioningForm.controls.releaseDate"
+                  [field]="fields.releaseDate"
+                  class="mx-2"
+                ></app-date-field>
+              </div>
+            </div>
+            <div class="col-md-4" *ngIf="editMode">
+              <button
+                (click)="clear()"
+                class="btn btn-warning btn-block text-white p-2 my-2 shadow-sm"
+                [disabled]="loading"
+              >
+                Clear
+              </button>
+            </div>
+            <div class="col-md-4" *ngIf="editMode">
+              <button
+                (click)="delete()"
+                class="btn btn-danger btn-block text-white p-2 my-2 shadow-sm"
+                [disabled]="loading"
+              >
+                Delete
+              </button>
+            </div>
+            <div [ngClass]="editMode ? 'col-md-4' : 'col-12'">
+              <button
+                type="submit"
+                class="btn btn-primary btn-block text-white p-2 my-2 shadow-sm"
+                [disabled]="loading"
+              >
+                {{ loading ? 'Saving...' : 'Save' }}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--VERSIONING FORM-->
+  </div>
+</div>

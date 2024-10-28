@@ -1,0 +1,34 @@
+div.bg-dark-custom {
+  padding: 10px;
+  margin: 15px 0px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.menu-list {
+  max-height: calc(100vh - 150px);
+  overflow-y: scroll;
+
+  .list-group-item.parent {
+    background-color: #ffffff;
+  }
+
+  .list-group-item:not(.parent) {
+    background-color: #ffffff;
+  }
+
+  .list-group-item {
+    padding: 10px 10px;
+    cursor: pointer;
+  }
+
+  .list-group-item:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,41 @@
+<app-toast></app-toast>
+<body>
+  <div class="backdrop">
+    <div class="container">
+      <div class="card">
+        <h1 class="title"><b>IRIS</b></h1>
+        <div class="form-theme">
+          <form [formGroup]="loginForm" (ngSubmit)="login()" *ngIf="!loading">
+            <div class="form">
+              <input id="username" type="email" aria-label="Email" formControlName="username" placeholder="E-mail" />
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                aria-label="Password"
+                formControlName="password"
+              />
+              <button id="login">Sign in</button>
+              <a href="forgot-password">Forgot your password?</a><br />
+            </div>
+          </form>
+          <app-loading [show]="loading" [size]="'5x'"></app-loading>
+        </div>
+        <img src="/assets/images/hp_logo.png" class="logo my-4" />
+        <p>IRIS – Instant Reporting & Information System</p>
+        <p>
+          Supply Chain Resilience
+        </p>
+        <p>
+          Brazil Integrated Manufacturing & Panama Ops
+        </p>
+      </div>
+    </div>
+    <div style="position: absolute; left: 0">
+      <p class="bottom">
+        © Copyright 2020 HP Development Company, L.P. | Development by FIT – Flex Institute of Technology upon request
+        from HP Brazil
+      </p>
+    </div>
+  </div>
+</body>

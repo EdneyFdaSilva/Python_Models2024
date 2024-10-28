@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Audit Failure Communication</title>
+</head>
+<body style="margin: 0; padding: 0;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+        <tr>
+            <td bgcolor="#f6f6f6" align="center" style="padding: 0px 0;">
+                <table border="0" cellpadding="0" cellspacing="0"  width="750" style="border-collapse: collapse;">
+                    <tr>
+                        <td bgcolor="#ffffff" align="center" style="padding: 0px; border: 0px solid #e5e5e5;">
+                            <img src="https://mfgopsdigitalsc.com.br/assets/images/AUDIT_FAILURE_COMMUNICATION-Ink_HW.png" width="750px">
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td bgcolor="#9C0707" align="center" style="padding: 20px; border: 0px solid #e5e5e5; border-top: none; width:100px;">
+                            <table border="0" cellpadding="0" cellspacing="0"  width="100%" style="border-collapse: collapse;">                                
+                                <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #FFF; margin: 0; text-align: center;">FAILURE DATE: {{P_FailureDate}}</p>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ffffff" align="center" style="padding: 20px; border: 1px solid #e5e5e5; border-top: none;">
+                            <table border="0" cellpadding="0" cellspacing="0"  width="100%" style="border-collapse: collapse;">
+                                <tr>
+                                    <td border="0" cellpadding="0" cellspacing="0" style="padding: 30px" 0; width="50%">
+                                        <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 400;">STATION:</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">{{P_Station}}</p>
+                                    </td>
+                                    <td border="0" cellpadding="0" cellspacing="0" style="padding: 30px 0;" width="50%">
+                                        <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 400;">LINE:</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">{{P_Line}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <table border="0" cellpadding="0" cellspacing="0"  width="100%" style="border-collapse: collapse;">
+                                <tr>
+                                    <td border="0" cellpadding="0" cellspacing="0" style="padding: 30px" 0; width="50%">
+                                        <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 400;">SHIFT:</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">{{P_Shift}}</p>
+                                    </td>
+                                    <td border="0" cellpadding="0" cellspacing="0" style="padding: 30px 0;" width="50%">
+                                        <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 400;">SERIAL NUMBER:</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">{{P_SerialNumber}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <table border="0" cellpadding="0" cellspacing="0"  width="100%" style="border-collapse: collapse;">
+                                <tr>
+                                    <td border="0" cellpadding="0" cellspacing="0" style="padding: 30px" 0; width="50%">
+                                        <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 400;">SKU:</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">{{P_SubFamily}} ({{P_SKU}})</p>
+                                    </td>
+                                    <td border="0" cellpadding="0" cellspacing="0" style="padding: 30px 0;" width="50%">
+                                        <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 400;">FAILURE DESCRIPTION:</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">{{P_Symptom}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <table border="0" cellpadding="0" cellspacing="0"  width="100%" style="border-collapse: collapse;">
+                                <tr>
+                                    <td border="0" cellpadding="0" cellspacing="0" style="padding: 30px" 0; width="50%">
+                                        <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 400;">ROOT CAUSE:</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">{{P_Commodity}}</p>
+                                    </td>
+                                    <td border="0" cellpadding="0" cellspacing="0" style="padding: 30px 0;" width="50%">
+                                        <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 400;">REWORK ACTION:</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">{{P_ReworkActionDescription}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <table border="0" cellpadding="0" cellspacing="0"  width="100%" style="border-collapse: collapse;">
+                                <tr>
+                                    <td border="0" cellpadding="0" cellspacing="0" style="padding: 30px" 0; width="100%">
+                                        <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 400;">CONTAINMENT ACTIONS:</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">1. Inspecionado todas as máquina do processo, desde ponto de origem até o ponto de detecção.</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">2. Seleção automática das 4 amostras sequenciais para validação do processo.</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">3. Teste funcional das 4 amostras selecionadas.</p>
+                                        <p style="font-family: Arial, sans-serif; font-size: 18px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 800;">4. Lote segregado para inspeção.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <table border="0" cellpadding="0" cellspacing="0"  width="100%" style="border-collapse: collapse;">
+                                <tr>
+                                    <td border="0" cellpadding="0" cellspacing="0" style="padding: 30px" 0; width="100%">
+                                        <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #252525; margin: 0; text-align: left; font-weight: 400;">SERIAL NUMBER FOR CLEARANCE:</p>
+                                        {{P_Serials}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td bgcolor="#000" align="center" style="padding: 10px; border: 0px solid #e5e5e5; border-top: none; width:100px; background: #000000;">
+                            <table border="0" cellpadding="0" cellspacing="0"  width="100%" style="border-collapse: collapse; color: #252525;">                                
+                                <p style="font-family: Arial, sans-serif; font-size: 14px; line-height: 20px; color: #FFF; margin: 0; text-align: center;">keep reinventing</p>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>        
+    </table>
+</body>
+</html>
+
+</body>
+</html>

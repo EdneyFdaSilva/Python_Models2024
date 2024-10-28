@@ -1,0 +1,326 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/scss/functions';
+@import './sass/variables/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/code';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/tables';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/buttons';
+@import '~bootstrap/scss/transitions';
+@import '~bootstrap/scss/dropdown';
+@import '~bootstrap/scss/button-group';
+@import '~bootstrap/scss/input-group';
+@import '~bootstrap/scss/custom-forms';
+@import '~bootstrap/scss/nav';
+@import '~bootstrap/scss/navbar';
+@import '~bootstrap/scss/card';
+@import '~bootstrap/scss/breadcrumb';
+@import '~bootstrap/scss/pagination';
+@import '~bootstrap/scss/badge';
+@import '~bootstrap/scss/jumbotron';
+@import '~bootstrap/scss/alert';
+@import '~bootstrap/scss/progress';
+@import '~bootstrap/scss/media';
+@import '~bootstrap/scss/list-group';
+@import '~bootstrap/scss/close';
+@import '~bootstrap/scss/toasts';
+@import '~bootstrap/scss/modal';
+@import '~bootstrap/scss/tooltip';
+@import '~bootstrap/scss/popover';
+@import '~bootstrap/scss/carousel';
+@import '~bootstrap/scss/spinners';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/print';
+
+@import './sass/webfonts/hpsimplified/stylesheet.css';
+@import './sass/webfonts/hpicons/stylesheet.css';
+@import './sass/webfonts/formaDJRMicro/stylesheet.css';
+@import 'sass/components/components';
+@import 'sass/elements/elements';
+@import 'sass/utils/utils';
+@import 'sass/modal/modal';
+@import 'assets/fontawesome/css/all.css';
+@import 'sass/components/drop-down/drop-down.scss';
+
+@keyframes autofill {
+  to {
+    background: transparent;
+  }
+}
+
+input:-webkit-autofill {
+  animation-name: autofill;
+  animation-fill-mode: both;
+}
+
+// Text and Background Colors
+
+.text-gray-600 {
+  color: $gray-600;
+}
+
+.bg-gray-100 {
+  background-color: $gray-100;
+}
+
+.txtTableSmall {
+  font-size: 14px !important;
+  font-weight: normal !important;
+  color: #2e2e2e !important;
+}
+
+.txtTableSmallBold {
+  font-size: 14px !important;
+  font-weight: bold !important;
+  color: #000 !important;
+}
+
+.fontColorRed {
+  color: red !important;
+}
+
+.headerBackgroundBlue {
+  background: #adddf2 !important;
+}
+
+.headerBackgroundViolet {
+  background: #dfcadf !important;
+}
+
+.bg-gray-cell {
+  background-color: #e2e2e2;
+}
+
+.bg-gray-700 {
+  background-color: $gray-700;
+}
+
+.bg-orange {
+  background-color: #f4b56b;
+}
+
+.font-blue {
+  color: #0057ff !important;
+}
+
+.font-purple {
+  color: #d6008d !important;
+}
+
+.border-left-normal {
+  border-left: 1px solid #000 !important;
+}
+
+// Forms
+
+.form-control,
+.custom-select,
+.input-group-append,
+.input-group-prepend {
+  border-bottom-width: 1px !important;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  cursor: not-allowed;
+  background-color: transparent !important;
+  color: white;
+}
+
+.form-control-light {
+  color: $gray-700 !important;
+
+  &::placeholder {
+    color: $gray-700 !important;
+    opacity: 0.75;
+  }
+}
+
+.custom-control-label::before {
+  background-color: #ffffff;
+  border: black solid 1px;
+}
+
+.btn-transparent {
+  color: $blue;
+  background-color: rgb(0, 0, 0, 0);
+
+  &:hover {
+    color: $blue;
+    background-color: rgb(0, 0, 0, 0.35);
+  }
+}
+
+// Utilities
+
+.fake-link {
+  cursor: pointer;
+}
+
+.circle {
+  border-radius: 100%;
+  height: 1rem;
+  width: 1rem;
+  border: 1px solid $dark;
+  margin-right: 0.15rem;
+  margin-bottom: 0.1rem;
+
+  &-red {
+    background-color: #dc3545;
+  }
+
+  &-orange {
+    background-color: #fd7e14;
+  }
+
+  &-green {
+    background-color: #67b610;
+  }
+
+  &-yellow {
+    background-color: #ffff00;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  overflow-y: auto;
+
+  &-track {
+    background-color: #ddd;
+  }
+
+  &-thumb {
+    background-color: #555;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: #00b1e3;
+      overflow-y: auto;
+    }
+  }
+}
+
+select option {
+  background: #000;
+}
+
+.Early:before {
+  color: #0196d8;
+}
+
+.Target:before {
+  color: #a6ce3a;
+}
+
+.Late:before {
+  color: #f15a25;
+}
+
+.Primary:before {
+  color: #ddd;
+}
+
+//Dropdown
+
+.Enable-drop-down {
+  .dropdown-btn {
+    border: 0 !important;
+  }
+}
+
+.dropdown-list {
+  box-shadow: none !important;
+  background-color: #2e2e2e !important;
+  border: 1px solid #555 !important;
+  width: auto !important;
+  max-width: 500px !important;
+}
+
+.dropdown-list > ul > li > div {
+  color: white !important;
+}
+
+ng-multiselect-dropdown {
+  &.bg-white {
+    .dropdown-list {
+      & > ul > li > div {
+        color: #333 !important;
+      }
+    }
+  }
+}
+
+.header-row.crud {
+  background-color: black;
+  color: white;
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .fa-chevron-left {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+.bg-dark-custom {
+  background-color: #1f1f1f;
+}
+
+.bg-white-custom {
+  background-color: #f9f9f9;
+}
+
+//Autocomplete style
+input:-webkit-autofill {
+  -webkit-text-fill-color: white;
+  color: white;
+}
+
+table.dataTable thead {
+  th,
+  td {
+    padding-left: 9px !important;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+// fix pagination showing behind modal`s shadow
+.cdk-overlay-container {
+  z-index: 1051;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.sidenav-margin {
+  margin-left: $sidenav-width;
+}
+
+.lightTheme {
+  @import './sass/themes/light-theme';
+}
+
+.darkTheme {
+  @import './sass/themes/dark-theme';
+}
+
+// nav.position-fixed.sidenav-container.py-4.hide {
+//   z-index: unset;
+// }
+
+// nav.position-fixed.sidenav-container.py-4 {
+//   z-index: 101;
+// }
